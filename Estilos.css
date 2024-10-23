@@ -1,0 +1,202 @@
+/* Asegura que el body ocupe al menos el 100% de la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Envuelve todo el contenido excepto el footer */
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal crece para llenar el espacio disponible */
+.content {
+    flex: 1;
+}
+
+/* Estilos para el header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8edd9; /* Color de fondo del header */
+    color: white; /* Color del texto del header para mejor visibilidad */
+}
+
+/* Estilos para la parte superior */
+#ParteSuperior {
+    position: relative;
+    text-align: center;
+    background-color: #f8edd9; /* Color de fondo más oscuro */
+    padding: 10px;
+    border-bottom: 3px solid #f8edd9;
+    overflow: hidden;
+}
+
+/* Imagen de bienvenida */
+#ParteSuperior img {
+    width: 100%; /* Se ajusta al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    max-height: 600px; /* Limita la altura máxima para evitar imágenes muy altas */
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+}
+
+/* parte del nombre y logo de la empresa */
+#nombreEmpresa {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    color: white; /* Cambié a blanco para mejor visibilidad sobre la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#nombreEmpresa h1 {
+    font-size: 2.5rem; /* Tamaño grande para "L & Z Painting" */
+    font-weight: bold;
+    margin: 0;
+}
+
+#nombreEmpresa p {
+    font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
+    font-weight: normal;
+    margin: 0;
+}
+
+
+#nombreEmpresa h1 {
+    font-size: 1.5rem; /* Tamaño grande para "L & Z Painting" */
+    font-weight: bold;
+    margin: 0;
+}
+
+#nombreEmpresa p {
+    font-size: 0.8rem; /* Tamaño más pequeño para el subtítulo */
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Carrusel de imágenes */
+#carouselExample {
+    max-width: 80%;
+    max-height: 400px;
+    margin: 0 auto;
+}
+
+/* Ajusta las imágenes dentro del carrusel */
+.carousel-item img {
+    max-height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Centra las imágenes en el carrusel */
+.carousel-inner {
+    text-align: center;
+}
+/*para el colo de las flechas del carrusel*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffcc00; /* Cambia esto al color que elijas */
+    border-radius: 50%; /* Forma redondeada */
+    padding: 10px; /* Espacio alrededor del icono */
+}
+
+
+/* General para el body */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Añadir un contenedor principal para el contenido */
+.main-content {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Asegura que el texto dentro también esté centrado */
+}
+
+/* css del título 1 */
+#main-content h2 {
+    padding: 0;
+    margin-left: 10%; /* Ajusta este valor según el espacio que desees a la izquierda */
+    text-align: left;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #acb1b65e;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.container-fluid {
+    background-color: #f8edd9;
+}
+
+/* Contenedor para todas las imágenes de contacto */
+#Contactos {
+    display: flex; /* Usa flexbox para alinearlas horizontalmente */
+    justify-content: space-between; /* Espacio entre los elementos */
+    gap: 10px; /* Espacio entre cada imagen */
+    padding: 20px; /* Añade espacio alrededor del contenedor */
+}
+
+#whatsap, #facebook, #ticktock {
+    width: 160px;
+    height: 150px;
+    border: 2px solid rgb(79, 148, 148);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.btn-custom:hover {
+    background-color: #f1be49; /* Cambiar color al pasar el ratón */
+    color: #317039; /* Color de texto en hover */
+    border-color: #317039; /* Cambiar el color del borde en hover */
+    
+}
+/*color para cada boton*/
+.btn-inicio {
+    background-color: #f1be49; /* Azul */
+    color: white;
+    margin: 0 10px; /* Espacio horizontal de 10px */
+    border-radius: 10px;
+}
+
+.btn-servicios {
+    background-color: #317039; /* Verde */
+    color: white;
+    margin: 0 10px; /* Espacio horizontal de 10px */
+    border-radius: 10px;
+}
+
+.btn-galeria {
+    background-color: #a3311d; /* Rojo */
+    color: white;
+    margin: 0 10px; /* Espacio horizontal de 10px */
+    border-radius: 10px;
+}
+
+.btn-contacto {
+    background-color: #ffc107; /* Amarillo */
+    color: black; /* Cambia a negro para mejor visibilidad */
+    margin: 0 10px; /* Espacio horizontal de 10px */
+    border-radius: 10px;
+}
+
