@@ -36,12 +36,13 @@ header {
     width: 70%;
 }
 
-/* Estilos para pantallas móviles */
+/* Ajustes para pantallas móviles */
 @media (max-width: 768px) {
     .header {
-        width: 90%; /* Ajusta el ancho para pantallas móviles */
-        padding: 10px; /* Ajusta el padding */
-        font-size: 14px; /* Reduce el tamaño de la fuente si es necesario */
+        top: 10%;
+        width: 85%; /* Ajusta el ancho para pantallas móviles */
+        padding: 10px; /* Reduce el padding */
+        font-size: 14px; /* Ajusta el tamaño de fuente */
     }
 }
 
@@ -63,13 +64,13 @@ header {
     object-fit: cover; /* Cubre el espacio sin deformar la imagen */
 }
 
-/* parte del nombre y logo de la empresa */
+/* Parte del nombre y logo de la empresa */
 #nombreEmpresa {
     position: absolute;
     top: 20px;
     left: 20px;
     text-align: left;
-    color: white; /* Cambié a blanco para mejor visibilidad sobre la imagen */
+    color: white;
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     padding: 10px;
     border-radius: 5px;
@@ -87,17 +88,23 @@ header {
     margin: 0;
 }
 
+/* Ajustes de #nombreEmpresa en móviles */
+@media (max-width: 768px) {
+    #nombreEmpresa {
+        top: 10px;
+        left: 10px;
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        background-color: rgba(0, 0, 0, 0.6); /* Fondo más transparente */
+        padding: 8px;
+    }
 
-#nombreEmpresa h1 {
-    font-size: 1.5rem; /* Tamaño grande para "L & Z Painting" */
-    font-weight: bold;
-    margin: 0;
-}
+    #nombreEmpresa h1 {
+        font-size: 1.5rem; /* Ajuste de tamaño del título */
+    }
 
-#nombreEmpresa p {
-    font-size: 0.8rem; /* Tamaño más pequeño para el subtítulo */
-    font-weight: normal;
-    margin: 0;
+    #nombreEmpresa p {
+        font-size: 0.8rem; /* Ajuste del subtítulo */
+    }
 }
 
 /* Carrusel de imágenes */
@@ -119,14 +126,26 @@ header {
 .carousel-inner {
     text-align: center;
 }
-/*para el colo de las flechas del carrusel*/
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #ffcc00; /* Cambia esto al color que elijas */
-    border-radius: 50%; /* Forma redondeada */
-    padding: 10px; /* Espacio alrededor del icono */
+
+/* Ajuste del carrusel en móviles */
+@media (max-width: 768px) {
+    #carouselExample {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .carousel-item img {
+        max-height: 250px;
+    }
 }
 
+/* Estilos para las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffcc00;
+    border-radius: 50%;
+    padding: 10px;
+}
 
 /* General para el body */
 body {
@@ -135,19 +154,31 @@ body {
     text-align: center;
 }
 
-/* Añadir un contenedor principal para el contenido */
+/* Contenedor principal para el contenido */
 .main-content {
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* Asegura que el texto dentro también esté centrado */
+    text-align: center;
 }
 
-/* css del título 1 */
+/* Estilo para el título 1 */
 #main-content h2 {
     padding: 0;
-    margin-left: 10%; /* Ajusta este valor según el espacio que desees a la izquierda */
+    margin-left: 10%;
     text-align: left;
+}
+
+/* Ajuste de #main-content y h2 en móviles */
+@media (max-width: 768px) {
+    #main-content h2 {
+        font-size: 1.2rem;
+        margin-left: 5%;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
 }
 
 /* Pie de página */
@@ -164,12 +195,12 @@ footer {
     background-color: #f8edd9;
 }
 
-/* Contenedor para todas las imágenes de contacto */
+/* Contenedor para imágenes de contacto */
 #Contactos {
-    display: flex; /* Usa flexbox para alinearlas horizontalmente */
-    justify-content: space-between; /* Espacio entre los elementos */
-    gap: 10px; /* Espacio entre cada imagen */
-    padding: 20px; /* Añade espacio alrededor del contenedor */
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
 }
 
 #whatsap, #facebook, #ticktock {
@@ -185,39 +216,38 @@ footer {
     margin: 0;
 }
 
-
+/* Estilos para botones personalizados */
 .btn-custom:hover {
-    background-color: #f1be49; /* Cambiar color al pasar el ratón */
-    color: #317039; /* Color de texto en hover */
-    border-color: #317039; /* Cambiar el color del borde en hover */
-    
+    background-color: #f1be49;
+    color: #317039;
+    border-color: #317039;
 }
-/*color para cada boton*/
+
+/* Colores para cada botón */
 .btn-inicio {
-    background-color: #f1be49; /* Azul */
+    background-color: #f1be49;
     color: white;
-    margin: 0 10px; /* Espacio horizontal de 10px */
+    margin: 0 10px;
     border-radius: 10px;
 }
 
 .btn-servicios {
-    background-color: #317039; /* Verde */
+    background-color: #317039;
     color: white;
-    margin: 0 10px; /* Espacio horizontal de 10px */
+    margin: 0 10px;
     border-radius: 10px;
 }
 
 .btn-galeria {
-    background-color: #a3311d; /* Rojo */
+    background-color: #a3311d;
     color: white;
-    margin: 0 10px; /* Espacio horizontal de 10px */
+    margin: 0 10px;
     border-radius: 10px;
 }
 
 .btn-contacto {
-    background-color: #ffc107; /* Amarillo */
-    color: black; /* Cambia a negro para mejor visibilidad */
-    margin: 0 10px; /* Espacio horizontal de 10px */
+    background-color: #ffc107;
+    color: black;
+    margin: 0 10px;
     border-radius: 10px;
 }
-
