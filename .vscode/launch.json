@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open Index.html",
-            "file": "e:\\Portafolio\\html(web)\\Pintiuras\\Index.html"
+            "file": "C:\\portafolio\\Pintiuras\\Index.html"
         }
     ]
 }

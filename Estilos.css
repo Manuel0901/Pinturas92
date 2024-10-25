@@ -24,6 +24,27 @@ header {
     color: white; /* Color del texto del header para mejor visibilidad */
 }
 
+/* Estilos generales */
+.header {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    .header {
+        width: 90%; /* Ajusta el ancho para pantallas móviles */
+        padding: 10px; /* Ajusta el padding */
+        font-size: 14px; /* Reduce el tamaño de la fuente si es necesario */
+    }
+}
+
 /* Estilos para la parte superior */
 #ParteSuperior {
     position: relative;
