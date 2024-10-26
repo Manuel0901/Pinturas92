@@ -217,6 +217,23 @@ footer {
 }
 
 /*aqui van los estilos generales para los botones*/
+.btn-galeria {
+    background-color: #a3311d; /* Color de fondo */
+    color: white; /* Color del texto */
+    margin: 0 110px; /* Márgenes izquierdo y derecho */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px 20px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+    .btn-galeria {
+        margin: 0 20px; /* Reduce el margen en móviles */
+        padding: 8px 16px; /* Ajusta el tamaño del botón */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+}
 
 button {
     padding: 12px 24px; /* Tamaño general */
@@ -253,27 +270,27 @@ button:hover {
 .btn-inicio {
     background-color: #f1be49;
     color: white;
-    margin: 0 10px;
+    margin: 0 110px;
     border-radius: 10px;
 }
 
 .btn-servicios {
     background-color: #317039;
     color: white;
-    margin: 0 10px;
+    margin: 0 110px;
     border-radius: 10px;
 }
 
 .btn-galeria {
     background-color: #a3311d;
     color: white;
-    margin: 0 10px;
+    margin: 0 110px;
     border-radius: 10px;
 }
 
 .btn-contacto {
     background-color: #ffc107;
     color: black;
-    margin: 0 10px;
+    margin: 0 110px;
     border-radius: 10px;
 }
