@@ -218,6 +218,30 @@ footer {
 
 /*aqui van los estilos generales para los botones*/
 
+button {
+    padding: 12px 24px; /* Tamaño general */
+    font-size: 16px;
+    /* Color y estilo */
+    background-color: #004080; /* Color de fondo del botón */
+    color: white; /* Color de texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover para computadora */
+button:hover {
+    background-color: #0059b3;
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    button {
+        padding: 8px 16px; /* Ajusta el tamaño para pantallas móviles */
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
+}
+
 /* Estilos para botones personalizados */
 .btn-custom:hover {
     background-color: #f1be49;
