@@ -218,21 +218,6 @@ footer {
 
 /*aqui van los estilos generales para los botones*/
 
-
-/* Estilos generales de los botones */
-button, .navbar-nav .nav-link {
-    padding: 12px 24px; /* Tamaño general */
-    font-size: 16px;
-}
-
-/* Estilos para pantallas móviles */
-@media (max-width: 768px) {
-    button, .navbar-nav .nav-link {
-        padding: 8px 16px; /* Ajusta el tamaño para pantallas móviles */
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-    }
-}
-
 /* Estilos para botones personalizados */
 .btn-custom:hover {
     background-color: #f1be49;
