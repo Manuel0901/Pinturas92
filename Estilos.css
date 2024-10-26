@@ -4,14 +4,12 @@ html, body {
     margin: 0;
 }
 
-/* Envuelve todo el contenido excepto el footer */
 .wrapper {
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* El contenido principal crece para llenar el espacio disponible */
 .content {
     flex: 1;
 }
@@ -20,101 +18,93 @@ html, body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: #f8edd9; /* Color de fondo del header */
-    color: white; /* Color del texto del header para mejor visibilidad */
+    background-color: #f8edd9;
+    color: white;
 }
 
-/* Estilos generales */
 .header {
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     text-align: center;
     width: 70%;
 }
 
-/* Ajustes para pantallas móviles */
 @media (max-width: 768px) {
     .header {
         top: 10%;
-        width: 85%; /* Ajusta el ancho para pantallas móviles */
-        padding: 10px; /* Reduce el padding */
-        font-size: 14px; /* Ajusta el tamaño de fuente */
+        width: 85%;
+        padding: 10px;
+        font-size: 14px;
     }
 }
 
-/* Estilos para la parte superior */
+/* Parte superior */
 #ParteSuperior {
     position: relative;
     text-align: center;
-    background-color: #f8edd9; /* Color de fondo más oscuro */
+    background-color: #f8edd9;
     padding: 10px;
     border-bottom: 3px solid #f8edd9;
     overflow: hidden;
 }
 
-/* Imagen de bienvenida */
 #ParteSuperior img {
-    width: 100%; /* Se ajusta al 100% del ancho del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    max-height: 600px; /* Limita la altura máxima para evitar imágenes muy altas */
-    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
 }
 
-/* Parte del nombre y logo de la empresa */
 #nombreEmpresa {
     position: absolute;
     top: 20px;
     left: 20px;
     text-align: left;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
 }
 
 #nombreEmpresa h1 {
-    font-size: 2.5rem; /* Tamaño grande para "L & Z Painting" */
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 0;
 }
 
 #nombreEmpresa p {
-    font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
+    font-size: 1rem;
     font-weight: normal;
     margin: 0;
 }
 
-/* Ajustes de #nombreEmpresa en móviles */
 @media (max-width: 768px) {
     #nombreEmpresa {
         top: 10px;
         left: 10px;
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-        background-color: rgba(0, 0, 0, 0.6); /* Fondo más transparente */
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.6);
         padding: 8px;
     }
-
     #nombreEmpresa h1 {
-        font-size: 1.5rem; /* Ajuste de tamaño del título */
+        font-size: 1.5rem;
     }
-
     #nombreEmpresa p {
-        font-size: 0.8rem; /* Ajuste del subtítulo */
+        font-size: 0.8rem;
     }
 }
 
-/* Carrusel de imágenes */
+/* Carrusel */
 #carouselExample {
     max-width: 80%;
     max-height: 400px;
     margin: 0 auto;
 }
 
-/* Ajusta las imágenes dentro del carrusel */
 .carousel-item img {
     max-height: 400px;
     width: auto;
@@ -122,24 +112,20 @@ header {
     margin: 0 auto;
 }
 
-/* Centra las imágenes en el carrusel */
 .carousel-inner {
     text-align: center;
 }
 
-/* Ajuste del carrusel en móviles */
 @media (max-width: 768px) {
     #carouselExample {
         max-width: 100%;
         max-height: 250px;
     }
-
     .carousel-item img {
         max-height: 250px;
     }
 }
 
-/* Estilos para las flechas del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: #ffcc00;
@@ -154,7 +140,7 @@ body {
     text-align: center;
 }
 
-/* Contenedor principal para el contenido */
+/* Contenedor principal */
 .main-content {
     max-width: 80%;
     margin: 0 auto;
@@ -162,20 +148,17 @@ body {
     text-align: center;
 }
 
-/* Estilo para el título 1 */
 #main-content h2 {
     padding: 0;
     margin-left: 10%;
     text-align: left;
 }
 
-/* Ajuste de #main-content y h2 en móviles */
 @media (max-width: 768px) {
     #main-content h2 {
         font-size: 1.2rem;
         margin-left: 5%;
     }
-
     .main-content {
         padding: 15px;
     }
@@ -185,86 +168,5 @@ body {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #acb1b65e;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
-
-.container-fluid {
-    background-color: #f8edd9;
-}
-
-/* Contenedor para imágenes de contacto */
-#Contactos {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 20px;
-}
-
-#whatsap, #facebook, #ticktock {
-    width: 160px;
-    height: 150px;
-    border: 2px solid rgb(79, 148, 148);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-/*aqui van los estilos generales para los botones*/
-
-
-/* Estilos generales de los botones */
-button, .navbar-nav .nav-link {
-    padding: 12px 24px; /* Tamaño general */
-    font-size: 16px;
-}
-
-/* Estilos para pantallas móviles */
-@media (max-width: 768px) {
-    button, .navbar-nav .nav-link {
-        padding: 8px 16px; /* Ajusta el tamaño para pantallas móviles */
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-    }
-}
-
-/* Estilos para botones personalizados */
-.btn-custom:hover {
-    background-color: #f1be49;
-    color: #317039;
-    border-color: #317039;
-}
-
-/* Colores para cada botón */
-.btn-inicio {
-    background-color: #f1be49;
-    color: white;
-    margin: 0 10px;
-    border-radius: 10px;
-}
-
-.btn-servicios {
-    background-color: #317039;
-    color: white;
-    margin: 0 10px;
-    border-radius: 10px;
-}
-
-.btn-galeria {
-    background-color: #a3311d;
-    color: white;
-    margin: 0 10px;
-    border-radius: 10px;
-}
-
-.btn-contacto {
-    background-color: #ffc107;
-    color: black;
-    margin: 0 10px;
-    border-radius: 10px;
+    background-color: #acb1b65
 }
