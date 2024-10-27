@@ -1,211 +1,203 @@
-/* Asegura que el body ocupe al menos el 100% de la pantalla */
+/* General */
 html, body {
     height: 100%;
     margin: 0;
-}
-
-/* Envuelve todo el contenido excepto el footer */
-.wrapper {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* El contenido principal crece para llenar el espacio disponible */
-.content {
-    flex: 1;
+    padding: 0;
+    text-align: center;
 }
 
 /* Estilos para el header */
 header {
+    background-color: #f8ead9;
+    color: white; /* Cambiado a black para mayor legibilidad */
+}
+/*color de botones del menu*/
+/* Estilo del botón dentro del contenedor con id 'botonServicios' */
+#botonServicios .nav-link {
+    margin: 15px;
+    background-color: #317039; /* Color de fondo azul */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
+    border-radius: 5px; /* Bordes redondeados */
     text-align: center;
-    padding: 20px;
-    background-color: #f8edd9; /* Color de fondo del header */
-    color: white; /* Color del texto del header para mejor visibilidad */
+    
 }
-
-/* Estilos generales */
-.header {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
-    padding: 20px;
+#botonInicio .nav-link {
+    background-color: #f1be49; /* Color de fondo azul */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
+    border-radius: 5px; /* Bordes redondeados */
     text-align: center;
-    width: 70%;
+    margin: 15px;
 }
 
-/* Ajustes para pantallas móviles */
-@media (max-width: 768px) {
-    .header {
-        top: 10%;
-        width: 85%; /* Ajusta el ancho para pantallas móviles */
-        padding: 10px; /* Reduce el padding */
-        font-size: 14px; /* Ajusta el tamaño de fuente */
-    }
-}
-
-/* Estilos para la parte superior */
-#ParteSuperior {
-    position: relative;
+#botonGaleria .nav-link {
+    background-color: rgb(255, 51, 0); /* Color de fondo azul */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
+    border-radius: 5px; /* Bordes redondeados */
     text-align: center;
-    background-color: #f8edd9; /* Color de fondo más oscuro */
-    padding: 10px;
-    border-bottom: 3px solid #f8edd9;
-    overflow: hidden;
+    margin: 15px;
 }
 
-/* Imagen de bienvenida */
-#ParteSuperior img {
-    width: 100%; /* Se ajusta al 100% del ancho del contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    max-height: 600px; /* Limita la altura máxima para evitar imágenes muy altas */
-    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+#botonContacto .nav-link {
+    background-color: #f1be49; /* Color de fondo azul */
+    color: #ffffff; /* Color de texto blanco */
+    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+    margin: 15px;
 }
+
+#botonInicio .nav-link:hover {
+    background-color: #29b9a6; /* Un tono más oscuro en hover */
+    color: #ffffff;
+}
+
+
+/* Cambia de color al pasar el ratón */
+#botonServicios .nav-link:hover {
+    background-color: #29b9a6; /* Un tono más oscuro en hover */
+    color: #ffffff;
+}
+#botonGaleria .nav-link:hover {
+    background-color: #29b9a6; /* Un tono más oscuro en hover */
+    color: #ffffff;
+}
+#botonContacto .nav-link:hover {
+    background-color: #29b9a6; /* Un tono más oscuro en hover */
+    color: #ffffff;
+}
+
 
 /* Parte del nombre y logo de la empresa */
 #nombreEmpresa {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-align: left;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    padding: 10px;
-    border-radius: 5px;
+    position: relative; /* Cambiado a relative para evitar problemas de posicionamiento */
+    color: black;
+    padding: 5px;
+    z-index: 1000;
 }
 
-#nombreEmpresa h1 {
-    font-size: 2.5rem; /* Tamaño grande para "L & Z Painting" */
-    font-weight: bold;
-    margin: 0;
-}
-
-#nombreEmpresa p {
-    font-size: 1rem; /* Tamaño más pequeño para el subtítulo */
-    font-weight: normal;
-    margin: 0;
-}
-
-/* Ajustes de #nombreEmpresa en móviles */
+/* Ajustes de header en móviles */
 @media (max-width: 768px) {
     #nombreEmpresa {
-        top: 10px;
-        left: 10px;
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-        background-color: rgba(0, 0, 0, 0.6); /* Fondo más transparente */
+        font-size: 20px;
+        background-color:#f8ead9;
         padding: 8px;
-    }
-
-    #nombreEmpresa h1 {
-        font-size: 1.5rem; /* Ajuste de tamaño del título */
-    }
-
-    #nombreEmpresa p {
-        font-size: 0.8rem; /* Ajuste del subtítulo */
     }
 }
 
-/* Carrusel de imágenes */
+/*estilos de logo empresarial*/
+#nombreEmpresa {
+    text-align: left; /* Alineación a la izquierda */
+}
+
+.d-flex {
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.empresa {
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    color: black; /* Color blanco (o el que desees) */
+    margin: 0; /* Elimina márgenes */
+}
+
+.subtitulo {
+    font-size: 1.5em; /* Tamaño de fuente mediano */
+    font-weight: normal; /* Peso normal */
+    color: black; /* Un color diferente */
+    margin: 0; /* Elimina márgenes */
+    margin-left:100px; /* Espacio a la izquierda */
+}
+
+.descripcion {
+    font-size: 1em; /* Tamaño de fuente pequeño */
+    font-weight: normal; /* Peso normal */
+    color:black; /* Color blanco (o el que desees) */
+    margin-top: 5px; /* Espacio arriba */
+}
+
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    #botonInicio .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+    }
+}
+@media (max-width: 768px) {
+    #botonServicios .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+    }
+}
+
+@media (max-width: 768px) {
+    #botonGaleria .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+    }
+}
+@media (max-width: 768px) {
+    #botonContacto .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+    }
+}
+
+/* Carrusel */
 #carouselExample {
     max-width: 80%;
-    max-height: 400px;
     margin: 0 auto;
 }
 
-/* Ajusta las imágenes dentro del carrusel */
+/* Color de los íconos de navegación del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #f1be49; /* Cambia el color de la flecha a blanco */
+}
+
 .carousel-item img {
     max-height: 400px;
     width: auto;
     display: block;
     margin: 0 auto;
 }
-
-/* Centra las imágenes en el carrusel */
-.carousel-inner {
-    text-align: center;
+#carousel-control-next{
+    color: black;
 }
 
-/* Ajuste del carrusel en móviles */
-@media (max-width: 768px) {
-    #carouselExample {
-        max-width: 100%;
-        max-height: 250px;
-    }
 
-    .carousel-item img {
-        max-height: 250px;
-    }
-}
-
-/* Estilos para las flechas del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #ffcc00;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-/* General para el body */
-body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Contenedor principal para el contenido */
+/* Contenedor principal para contenido */
 .main-content {
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
 }
 
-/* Estilo para el título 1 */
-#main-content h2 {
-    padding: 0;
-    margin-left: 10%;
-    text-align: left;
-}
-
-/* Ajuste de #main-content y h2 en móviles */
-@media (max-width: 768px) {
-    #main-content h2 {
-        font-size: 1.2rem;
-        margin-left: 5%;
-    }
-
-    .main-content {
-        padding: 15px;
-    }
-}
-
-/* Pie de página */
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #acb1b65e;
-    width: 100%;
-    position: relative;
-    bottom: 0;
 }
-
-.container-fluid {
-    background-color: #f8edd9;
-}
-
 /* Contenedor para imágenes de contacto */
 #Contactos {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espaciado entre las imágenes */
     padding: 20px;
 }
 
 #whatsap, #facebook, #ticktock {
-    width: 160px;
-    height: 150px;
+    width: 160px; /* Ajusta el tamaño según tus preferencias */
+    height: auto; /* Mantiene la proporción de las imágenes */
     border: 2px solid rgb(79, 148, 148);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -213,84 +205,44 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
-/*aqui van los estilos generales para los botones*/
-.btn-galeria {
-    background-color: #a3311d; /* Color de fondo */
-    color: white; /* Color del texto */
-    margin: 0 110px; /* Márgenes izquierdo y derecho */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 10px 20px; /* Tamaño del botón */
-    font-size: 16px; /* Tamaño de la fuente */
+/*color de fondo de la barra de navegacion*/
+.container-fluid{
+    background-color:#f8ead9;
 }
 
-/* Ajustes para pantallas móviles */
-@media (max-width: 768px) {
-    .btn-galeria {
-        margin: 0 20px; /* Reduce el margen en móviles */
-        padding: 8px 16px; /* Ajusta el tamaño del botón */
-        font-size: 14px; /* Tamaño de fuente más pequeño */
-    }
+/* Color de los enlaces en la barra de navegación */
+.navbar-dark .navbar-nav .nav-link {
+    color: #000000; /* Cambia el color de los enlaces a negro */
 }
 
-button {
-    padding: 12px 24px; /* Tamaño general */
-    font-size: 16px;
-    /* Color y estilo */
-    background-color: #004080; /* Color de fondo del botón */
-    color: white; /* Color de texto */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Cambia el color en hover */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(216, 87, 27, 0.933); /* Cambia a un color (naranja) cuando pasas el ratón */
+}
+/* Cambiar el color de fondo del botón de navbar-toggler */
+.navbar-toggler {
+    background-color: #f1be49 !important; /* Cambia a tu color preferido */
+    border-color: #317039 !important; /* Cambia el borde si es necesario */
 }
 
-/* Hover para computadora */
-button:hover {
-    background-color: #0059b3;
+/* Cambiar el color del icono de hamburguesa */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+ /*lupa*/
+ .icon-lupa {
+    width: 50px;  /* Ajusta el tamaño a tu preferencia */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 10px; /* Espacio a la izquierda */
+    margin-right: 10px; /* Espacio a la derecha */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la lupa */
+}
+#separador {
+    height: 2px; /* Ajusta el grosor deseado */
+    background-color: rgba(8, 8, 8, 0.5); /* Color de la sombra oscura */
+    margin: 0; /* Elimina márgenes */
+    border: none !important; /* Elimina cualquier borde que Bootstrap pueda aplicar */
 }
 
-/* Estilos para pantallas móviles */
-@media (max-width: 768px) {
-    button {
-        padding: 8px 16px; /* Ajusta el tamaño para pantallas móviles */
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-    }
-}
-
-/* Estilos para botones personalizados */
-.btn-custom:hover {
-    background-color: #f1be49;
-    color: #317039;
-    border-color: #317039;
-}
-
-/* Colores para cada botón */
-.btn-inicio {
-    background-color: #f1be49;
-    color: white;
-    margin: 0 110px;
-    border-radius: 10px;
-}
-
-.btn-servicios {
-    background-color: #317039;
-    color: white;
-    margin: 0 110px;
-    border-radius: 10px;
-}
-
-.btn-galeria {
-    background-color: #a3311d;
-    color: white;
-    margin: 0 110px;
-    border-radius: 10px;
-}
-
-.btn-contacto {
-    background-color: #ffc107;
-    color: black;
-    margin: 0 110px;
-    border-radius: 10px;
-}
