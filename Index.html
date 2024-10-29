@@ -26,53 +26,45 @@
         <header>
             <!-- Menú de navegación -->
             <!-- Barra de navegación -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
-    <div class="container-fluid">
-        <!-- Nombre de la empresa en la esquina superior izquierda -->
-        <div id="nombreEmpresa">
-            <div class="d-flex align-items-center">
-                <h1 class="empresa">L&Z</h1>
-                <h2 class="subtitulo ms-2">Painting</h2> <!-- "Painting" estará al lado de "L & Z" -->
-               
-
-            </div>
-            <p class="descripcion">INSPIRING COLORS, LASTING QUALITY</p> <!-- Este texto estará debajo -->
-        </div>
-
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>   
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <div id="botonInicio">
-                    <a class="nav-link btn-inicio" href="Index.html">Inicio</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                    <div id="botonServicios">
-                    <a class="nav-link btn-servicios" href="Servicios.html">Servicios</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                    <div id="botonGaleria">
-                    <a class="nav-link btn-galeria" href="Galeria.html">Galería</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                    <div id="botonContacto">
-                    <a class="nav-link btn-contacto" href="Contacto.html">Contacto</a>
-                </div>
-                </li>
-            </ul>
-            <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+            <nav class="navbar navbar-expand-lg" style="background-color: white;">
+                <div class="container-fluid">
+                    <div id="nombreEmpresa">
+                        <img src="RecursosVisuales/Logo.png" alt="Logo de L & Z Painting" />
+                    </div>
             
-            <hr id="separador" />
-        </div>
-    </div>
-</nav>
+                    <!-- Botón para desplegar el menú, con clase ms-auto para moverlo a la derecha -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto;">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <div id="BotonInicio">
+                                <a class="nav-link btn-inicio" href="Index.html">Inicio</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonServicios">
+                                <a class="nav-link btn-servicios" href="Servicios.html">Servicios</a>
+                            </div>
+                            </li>
+                            <div id="BotonGaleria">
+                            <li class="nav-item">
+                                <a class="nav-link btn-galeria" href="Galeria.html">Galería</a>
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                                <div id="BotonContacto">
+                                <a class="nav-link btn-contacto" href="Contacto.html">Contacto</a>
+                            </div>
+                            </li>
+                        </ul>
+                        <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
+                    </div>
+                </div>
+            </nav>
+            
             
 
            <!-- Separador con sombra -->
@@ -82,16 +74,16 @@
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="RecursosVisuales/home.jpeg" class="img-fluid d-block" alt="Imagen 1">
+            <img src="RecursosVisuales/home.jpeg" class="img-fluid d-block" alt="Imagen de inicio">
         </div>
         <div class="carousel-item">
-            <img src="RecursosVisuales/carrusel2.jpg" class="img-fluid d-block" alt="Imagen 2">
+            <img src="RecursosVisuales/carrusel2.jpg" class="img-fluid d-block" alt="Imagen del segundo carrusel">
         </div>
         <div class="carousel-item">
-            <img src="RecursosVisuales/carrusel3.jpg" class="img-fluid d-block" alt="Imagen 3">
+            <img src="RecursosVisuales/carrusel3.jpg" class="img-fluid d-block" alt="Imagen del tercer carrusel">
         </div>
         <div class="carousel-item">
-            <img src="RecursosVisuales/home.jpeg" class="img-fluid d-block" alt="Imagen 4">
+            <img src="RecursosVisuales/home.jpeg" class="img-fluid d-block" alt="Imagen de inicio">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -103,6 +95,7 @@
         <span class="visually-hidden">Siguiente</span>
     </button>
 </div>
+
         </header>
 
         <!-- Contenido principal -->

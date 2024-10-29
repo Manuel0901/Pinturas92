@@ -1,248 +1,370 @@
-/* General */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Estilos para el header */
-header {
-    background-color: #f8ead9;
-    color: white; /* Cambiado a black para mayor legibilidad */
-}
-/*color de botones del menu*/
-/* Estilo del botón dentro del contenedor con id 'botonServicios' */
-#botonServicios .nav-link {
-    margin: 15px;
-    background-color: #317039; /* Color de fondo azul */
-    color: #ffffff; /* Color de texto blanco */
-    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center;
-    
-}
-#botonInicio .nav-link {
-    background-color: #f1be49; /* Color de fondo azul */
-    color: #ffffff; /* Color de texto blanco */
-    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center;
-    margin: 15px;
-}
-
-#botonGaleria .nav-link {
-    background-color: rgb(255, 51, 0); /* Color de fondo azul */
-    color: #ffffff; /* Color de texto blanco */
-    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center;
-    margin: 15px;
-}
-
-#botonContacto .nav-link {
-    background-color: #f1be49; /* Color de fondo azul */
-    color: #ffffff; /* Color de texto blanco */
-    padding: 10px 20px; /* Añade relleno para hacerlo más como un botón */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center;
-    margin: 15px;
-}
-
-#botonInicio .nav-link:hover {
-    background-color: #29b9a6; /* Un tono más oscuro en hover */
-    color: #ffffff;
-}
-
-
-/* Cambia de color al pasar el ratón */
-#botonServicios .nav-link:hover {
-    background-color: #29b9a6; /* Un tono más oscuro en hover */
-    color: #ffffff;
-}
-#botonGaleria .nav-link:hover {
-    background-color: #29b9a6; /* Un tono más oscuro en hover */
-    color: #ffffff;
-}
-#botonContacto .nav-link:hover {
-    background-color: #29b9a6; /* Un tono más oscuro en hover */
-    color: #ffffff;
-}
-
-
-/* Parte del nombre y logo de la empresa */
-#nombreEmpresa {
-    position: relative; /* Cambiado a relative para evitar problemas de posicionamiento */
-    color: black;
-    padding: 5px;
-    z-index: 1000;
-}
-
-/* Ajustes de header en móviles */
-@media (max-width: 768px) {
-    #nombreEmpresa {
-        font-size: 20px;
-        background-color:#f8ead9;
-        padding: 8px;
+    /* General */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
     }
-}
 
-/*estilos de logo empresarial*/
-#nombreEmpresa {
-    text-align: left; /* Alineación a la izquierda */
-}
+    /* Estilos para el header */
+    header {
+        background-color: #f8ead9;
+        color: white; /* Cambiado a black para mayor legibilidad */
+    }
+   
 
-.d-flex {
-    display: flex; /* Usar flexbox */
-    align-items: center; /* Centrar verticalmente */
-}
-
-.empresa {
-    font-size: 2.5em; /* Tamaño de fuente grande */
-    font-weight: bold; /* Negrita */
-    color: black; /* Color blanco (o el que desees) */
-    margin: 0; /* Elimina márgenes */
-}
-
-.subtitulo {
-    font-size: 1.5em; /* Tamaño de fuente mediano */
-    font-weight: normal; /* Peso normal */
-    color: black; /* Un color diferente */
-    margin: 0; /* Elimina márgenes */
-    margin-left:100px; /* Espacio a la izquierda */
-}
-
-.descripcion {
-    font-size: 1em; /* Tamaño de fuente pequeño */
-    font-weight: normal; /* Peso normal */
-    color:black; /* Color blanco (o el que desees) */
-    margin-top: 5px; /* Espacio arriba */
-}
-
-
-/* Estilos para pantallas móviles */
-@media (max-width: 768px) {
+    /* Colores de fondo específicos */
     #botonInicio .nav-link {
-        max-width: 150px; /* Ancho máximo del botón */
-        width: 100%; /* El botón ocupa el 100% del ancho disponible */
-        margin: 10px auto; /* Centra el botón horizontalmente */
+        background-color: #f1be49; /* Color de fondo */
     }
-}
-@media (max-width: 768px) {
+
     #botonServicios .nav-link {
-        max-width: 150px; /* Ancho máximo del botón */
-        width: 100%; /* El botón ocupa el 100% del ancho disponible */
-        margin: 10px auto; /* Centra el botón horizontalmente */
+        background-color: #317039; /* Color de fondo */
     }
-}
 
-@media (max-width: 768px) {
     #botonGaleria .nav-link {
-        max-width: 150px; /* Ancho máximo del botón */
-        width: 100%; /* El botón ocupa el 100% del ancho disponible */
-        margin: 10px auto; /* Centra el botón horizontalmente */
+        background-color: rgb(255, 51, 0); /* Color de fondo */
     }
-}
-@media (max-width: 768px) {
+
     #botonContacto .nav-link {
-        max-width: 150px; /* Ancho máximo del botón */
-        width: 100%; /* El botón ocupa el 100% del ancho disponible */
-        margin: 10px auto; /* Centra el botón horizontalmente */
+        background-color: #f1be49; /* Color de fondo */
+    }
+
+
+    /* Estilos para pantallas móviles */
+    @media (max-width: 768px) {
+        /* Alineación del botón de menú a la derecha */
+        .navbar-toggler {
+            position: absolute; /* Posición absoluta para moverlo */
+            right: 20px; /* Ajusta la distancia desde la derecha */
+            top: 15px; /* Ajusta la distancia desde la parte superior */
+        }
+
+        #botonInicio .nav-link,
+        #botonServicios .nav-link,
+        #botonGaleria .nav-link,
+        #botonContacto .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+            padding: 10px 20px; /* Relleno para que se vea como un botón */
+            border-radius: 5px; /* Bordes redondeados */
+            color: #ffffff; /* Color de texto blanco */
+            transition: background-color 0.3s; /* Transición suave para el cambio de color */
+        }
+            
+        }
+
+        /* Colores de fondo específicos para móviles */
+        #botonInicio .nav-link {
+            background-color: #f1be49; /* Color de fondo */
+            hover:rgb(57, 161, 71);
+        }
+
+        #botonServicios .nav-link {
+            background-color: #317039; /* Color de fondo */
+            hover:rgb(57, 161, 71);
+        }
+
+        #botonGaleria .nav-link {
+            background-color: rgb(255, 51, 0); /* Color de fondo */
+        }
+
+        #botonContacto .nav-link {
+            background-color: #f1be49; /* Color de fondo */
+        }
+
+
+
+    /* Parte del nombre y logo de la empresa */
+    #nombreEmpresa {
+        position: relative; /* Cambiado a relative para evitar problemas de posicionamiento */
+        color: black;
+        padding: 5px;
+        z-index: 1000;
+    }
+
+    /* Ajustes de header en móviles */
+    @media (max-width: 768px) {
+        #nombreEmpresa {
+            font-size: 20px;
+            background-color:#f8ead9;
+            padding: 8px;
+        }
+    }
+
+    /*configuraciones ´para el nav-bar*/
+
+.navbar {
+    background-color: white;
+}
+/* Estilos para el navbar */
+.navbar {
+    margin-bottom: 20px; /* Añade separación inferior */
+}
+
+/* Estilo para el logo en el navbar */
+#nombreEmpresa img {
+    max-width: 100%; /* Asegura que el logo sea responsivo */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+/* Asegúrate de que el navbar siempre esté encima */
+.navbar {
+    position: relative; /* Cambia a fixed si quieres que siempre esté en la parte superior de la página al hacer scroll */
+    z-index: 10; /* Un valor alto para asegurarse de que esté sobre otros elementos */
+}
+
+/* Si quieres que la barra se quede fija en la parte superior mientras haces scroll */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed; /* Fija la barra en la parte superior de la pantalla */
+        width: 100%; /* Asegura que ocupe el ancho completo */
+        top: 0;
+    }
+
+}
+
+
+    .empresa {
+        font-size: 2.5em; /* Tamaño de fuente grande */
+        font-weight: bold; /* Negrita */
+        color: black; /* Color blanco (o el que desees) */
+        margin: 0; /* Elimina márgenes */
+    }
+    /* Contenedor del logo y nombre de la empresa */
+
+
+    #nombreEmpresa {
+        display: flex; /* Aplica flex al contenedor */
+        align-items: center; /* Centra verticalmente los elementos en el contenedor */
+        justify-content: flex-end; /* Alinea la imagen a la derecha */
+    }
+    
+    #nombreEmpresa img {
+        width: 200px; /* Ajusta el tamaño del logo aquí */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+    
+    /* Estilo para vista móvil */
+    @media (max-width: 768px) {
+        #nombreEmpresa {
+            justify-content: center; /* Centra horizontalmente en vista móvil */
+        }
+    }
+    
+    
+    /* Estilo del texto de descripción */
+    .descripcion {
+        font-size: 14px;
+        color: #555; /* Color del texto */
+        margin-left: 10px;
+        text-align: center;
+    }
+
+
+    .subtitulo {
+        font-size: 1.5em; /* Tamaño de fuente mediano */
+        font-weight: normal; /* Peso normal */
+        color: black; /* Un color diferente */
+        margin: 0; /* Elimina márgenes */
+        margin-left:100px; /* Espacio a la izquierda */
+    }
+
+    .descripcion {
+        font-size: 1em; /* Tamaño de fuente pequeño */
+        font-weight: normal; /* Peso normal */
+        color:black; /* Color blanco (o el que desees) */
+        margin-top: 5px; /* Espacio arriba */
+    }
+
+
+    /* Estilos para pantallas móviles */
+    @media (max-width: 768px) {
+        /* Alineación del botón de menú a la derecha */
+        .navbar-toggler {
+            position: absolute; /* Posición absoluta para moverlo */
+            right: 20px; /* Ajusta la distancia desde la derecha */
+            top: 15px; /* Ajusta la distancia desde la parte superior */
+        }
+
+        #botonInicio .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+
+        #botonServicios .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+
+        #botonGaleria .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+
+        #botonContacto .nav-link {
+            max-width: 150px; /* Ancho máximo del botón */
+            width: 100%; /* El botón ocupa el 100% del ancho disponible */
+            margin: 10px auto; /* Centra el botón horizontalmente */
+        }
+    }
+    /* Configuración para el contenedor de la navegación */
+.navbar-nav {
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+}
+
+/* Configuración para botones individuales */
+#BotonInicio .nav-link,
+#BotonServicios .nav-link,
+#BotonGaleria .nav-link,
+#BotonContacto .nav-link {
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px 0; /* Espacio vertical entre botones */
+    width: 120px; /* Ajusta el ancho según tus necesidades */
+    height: 40px; /* Ajusta la altura según tus necesidades */
+    display: flex; /* Para centrar el texto dentro del botón */
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+}
+
+/* Configuración de fondo de cada botón */
+#BotonInicio .nav-link {
+    background-color: #f1be49;
+    margin: 20px;
+}
+#BotonServicios .nav-link {
+    background-color: #317039;
+    margin: 20px;
+}
+#BotonGaleria .nav-link {
+    background-color: #db4b09;
+    margin: 20px;
+}
+#BotonContacto .nav-link {
+    background-color: #f1be49;
+    margin: 20px;
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Asegura que los botones estén en columna */
     }
 }
 
-/* Carrusel */
-#carouselExample {
-    max-width: 80%;
-    margin: 0 auto;
+
+    /* Carrusel */
+    /* Estilo de la barra de menú */
+.navbar {
+    position: relative; /* Asegúrate de que la barra de menú tenga un contexto de apilamiento */
+    z-index: 1000; /* Valor alto para mantener la barra de menú en la parte superior */
 }
 
-/* Color de los íconos de navegación del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #f1be49; /* Cambia el color de la flecha a blanco */
-}
-
-.carousel-item img {
-    max-height: 400px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
-#carousel-control-next{
-    color: black;
+/* Estilo del carrusel */
+.carousel {
+    position: relative; /* Asegúrate de que el carrusel tenga su propio contexto de apilamiento */
+    z-index: 1; /* Valor más bajo que la barra de menú */
+    margin-top: 20px; /* Ajusta este margen según sea necesario para que no se superpongan */
 }
 
 
-/* Contenedor principal para contenido */
-.main-content {
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
+    /* Color de los íconos de navegación del carrusel */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #f1be49; /* Cambia el color de la flecha a blanco */
+    }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #acb1b65e;
-}
-/* Contenedor para imágenes de contacto */
-#Contactos {
-    display: flex;
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 20px; /* Espaciado entre las imágenes */
-    padding: 20px;
-}
+    .carousel-item img {
+        max-height: 400px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    #carousel-control-next{
+        color: black;
+    }
 
-#whatsap, #facebook, #ticktock {
-    width: 160px; /* Ajusta el tamaño según tus preferencias */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border: 2px solid rgb(79, 148, 148);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/*color de fondo de la barra de navegacion*/
-.container-fluid{
-    background-color:#f8ead9;
-}
+    /* Contenedor principal para contenido */
+    .main-content {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-/* Color de los enlaces en la barra de navegación */
-.navbar-dark .navbar-nav .nav-link {
-    color: #000000; /* Cambia el color de los enlaces a negro */
-}
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #acb1b65e;
+    }
+    /* Contenedor para imágenes de contacto */
+    #Contactos {
+        display: flex;
+        justify-content: center; /* Centra las imágenes horizontalmente */
+        gap: 20px; /* Espaciado entre las imágenes */
+        padding: 20px;
+    }
 
-/* Cambia el color en hover */
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: rgba(216, 87, 27, 0.933); /* Cambia a un color (naranja) cuando pasas el ratón */
-}
-/* Cambiar el color de fondo del botón de navbar-toggler */
-.navbar-toggler {
-    background-color: #f1be49 !important; /* Cambia a tu color preferido */
-    border-color: #317039 !important; /* Cambia el borde si es necesario */
-}
+    #whatsap, #facebook, #ticktock {
+        width: 160px; /* Ajusta el tamaño según tus preferencias */
+        height: auto; /* Mantiene la proporción de las imágenes */
+        border: 2px solid rgb(79, 148, 148);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-/* Cambiar el color del icono de hamburguesa */
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-}
- /*lupa*/
- .icon-lupa {
-    width: 50px;  /* Ajusta el tamaño a tu preferencia */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-left: 10px; /* Espacio a la izquierda */
-    margin-right: 10px; /* Espacio a la derecha */
-    cursor: pointer; /* Cambia el cursor al pasar sobre la lupa */
-}
-#separador {
-    height: 2px; /* Ajusta el grosor deseado */
-    background-color: rgba(8, 8, 8, 0.5); /* Color de la sombra oscura */
-    margin: 0; /* Elimina márgenes */
-    border: none !important; /* Elimina cualquier borde que Bootstrap pueda aplicar */
-}
+    /*color de fondo de la barra de navegacion*/
+    .container-fluid{
+        background-color:#f8ead9 !important;
+    }
+
+    /* Color de los enlaces en la barra de navegación */
+    .navbar-dark .navbar-nav .nav-link {
+        color: #000000; /* Cambia el color de los enlaces a negro */
+    }
+
+    /* Cambia el color en hover */
+    .navbar-dark .navbar-nav .nav-link:hover {
+        color: rgba(216, 87, 27, 0.933); /* Cambia a un color (naranja) cuando pasas el ratón */
+    }
+    /* Cambiar el color de fondo del botón de navbar-toggler */
+    .navbar-toggler {
+        background-color: #f1be49 !important; /* Cambia a tu color preferido */
+        border-color: #317039 !important; /* Cambia el borde si es necesario */
+    }
+
+    /* Cambiar el color del icono de hamburguesa */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23ffffff' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    }
+    /*lupa*/
+    .icon-lupa {
+        width: 50px;  /* Ajusta el tamaño a tu preferencia */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-left: 10px; /* Espacio a la izquierda */
+        margin-right: 10px; /* Espacio a la derecha */
+        cursor: pointer; /* Cambia el cursor al pasar sobre la lupa */
+    }
+    #separador {
+        height: 2px; /* Ajusta el grosor deseado */
+        background-color: rgba(8, 8, 8, 0.5); /* Color de la sombra oscura */
+        margin: 0; /* Elimina márgenes */
+        border: none !important; /* Elimina cualquier borde que Bootstrap pueda aplicar */
+    }
+    /*añadido*/
+    
+
 
