@@ -1,4 +1,4 @@
-/* Estilo base para el formulario */
+/* Estilo para el formulario */
 .Formulario {
     max-width: 600px; /* Ancho máximo del formulario */
     margin: 20px auto; /* Centra el formulario en la página */
@@ -9,61 +9,41 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-/* Estilo para el título del formulario */
-h2 {
-    text-align: center; /* Centra el título */
-    color: #333; /* Color del texto */
-    margin-bottom: 20px; /* Espacio inferior */
+/* Estilo para los elementos del formulario */
+.Formulario .form-group {
+    margin-bottom: 15px; /* Espaciado entre los grupos de formulario */
 }
 
-/* Estilo para los grupos de formularios */
-.form-group {
-    margin-bottom: 15px; /* Espacio entre los grupos */
+.Formulario label {
+    font-weight: bold; /* Hacemos que las etiquetas sean negritas */
+    display: block; /* Aseguramos que la etiqueta ocupe toda la línea */
+    margin-bottom: 5px; /* Espaciado inferior */
 }
 
-/* Estilo para etiquetas */
-label {
-    display: block; /* Hace que la etiqueta ocupe toda la línea */
-    margin-bottom: 5px; /* Espacio inferior */
-    font-weight: bold; /* Negrita */
-    color: #555; /* Color del texto de las etiquetas */
-}
-
-/* Estilo para los campos de entrada */
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-textarea {
+.Formulario input[type="text"],
+.Formulario input[type="tel"],
+.Formulario input[type="email"],
+.Formulario textarea {
     width: 100%; /* Ancho completo */
     padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 4px; /* Bordes ligeramente redondeados */
-    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
-    transition: border-color 0.3s; /* Transición suave para el borde */
+    border: 1px solid #ced4da; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluimos el padding en el ancho total */
 }
 
 /* Estilo para el botón */
-button {
-    background-color: #007bff; /* Color de fondo azul */
+.Formulario button {
+    background-color: #007bff; /* Color de fondo del botón */
     color: white; /* Color del texto */
     border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes ligeramente redondeados */
     padding: 10px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor a puntero */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
     font-size: 16px; /* Tamaño de fuente */
-    width: 100%; /* Ancho completo */
-    transition: background-color 0.3s; /* Transición suave para el botón */
+    transition: background-color 0.3s; /* Transición suave */
 }
 
-/* Estilo del botón al pasar el ratón */
-button:hover {
-    background-color: #0056b3; /* Color al pasar el ratón */
-}
-
-/* Estilo de los campos de entrada al enfocar */
-input:focus,
-textarea:focus {
-    border-color: #007bff; /* Color del borde al enfocar */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
-    outline: none; /* Quita el contorno predeterminado */
+/* Efecto al pasar el mouse sobre el botón */
+.Formulario button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
 }
