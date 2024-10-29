@@ -143,14 +143,16 @@
     }
     
     #nombreEmpresa img {
-        width: 200px; /* Ajusta el tamaño del logo aquí */
-        height: auto; /* Mantiene la proporción de la imagen */
+       max-width: 200px; 
+        height: 100%; /* Mantiene la proporción de la imagen */
     }
     
     /* Estilo para vista móvil */
     @media (max-width: 768px) {
         #nombreEmpresa {
             justify-content: center; /* Centra horizontalmente en vista móvil */
+            max-width: 150px;
+            width: 100%;
         }
     }
     
