@@ -420,7 +420,7 @@ footer p {
 .ContenedorImagenes img:hover {
     transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
 }
-/*estilo para los h2 como de brochasos*/
+
 /* Estilo para los h2 con efecto de brocha */
 h2 {
     font-family: 'Arial', sans-serif; /* Fuente de los títulos */
