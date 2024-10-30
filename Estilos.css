@@ -302,31 +302,39 @@
         padding: 20px;
     }
 
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 10px;
-        background-color: #acb1b65e;
-    }
-    /* Contenedor para imágenes de contacto */
-    #Contactos {
-        display: flex;
-        justify-content: center; /* Centra las imágenes horizontalmente */
-        gap: 20px; /* Espaciado entre las imágenes */
-        padding: 20px;
-    }
+    /* Estilo del footer */
+footer {
+    background-color: #f8ead9; /* Color suave para el fondo del footer (ajusta según tus necesidades) */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center; /* Centra el texto en el footer */
+}
 
-    #whatsap, #facebook, #ticktock {
-        width: 160px; /* Ajusta el tamaño según tus preferencias */
-        height: auto; /* Mantiene la proporción de las imágenes */
-        border: 2px solid rgb(79, 148, 148);
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+/* Estilo para el contenedor de contactos */
+#Contactos {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los íconos */
+    margin-top: 10px;
+}
+
+/* Tamaño uniforme para los íconos */
+.iconoRedSocial img {
+    width: 50px; /* Tamaño uniforme para los íconos */
+    height: 50px; /* Mantiene la relación de aspecto */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de aumento al pasar el ratón */
+.iconoRedSocial img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del texto del footer */
+footer p {
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina márgenes innecesarios */
+}
+
 
     /*color de fondo de la barra de navegacion*/
     .container-fluid{
@@ -366,7 +374,76 @@
         margin: 0; /* Elimina márgenes */
         border: none !important; /* Elimina cualquier borde que Bootstrap pueda aplicar */
     }
-    /*añadido*/
-    
+    /*estilo para las imagenes*/
+/* Estilos generales */
+.main-content {
+    text-align: center;
+    margin: 40px auto;
+    width: 80%;
+}
 
+/* Estilo para los títulos */
+.main-content h1,
+.main-content h2 {
+    color: #333;
+    font-family: Arial, sans-serif;
+}
 
+/* Contenedor de la cuadrícula de imágenes */
+.ContenedorImagenes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas para los dos contenedores */
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Contenedores individuales (Contenedor1 y Contenedor2) */
+#Contenedor1,
+#Contenedor2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre las imágenes dentro de cada contenedor */
+    max-width: 250px; /* Controla el ancho del contenedor */
+}
+
+/* Estilo para las imágenes */
+.ContenedorImagenes img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para armonizar */
+    transition: transform 0.3s ease; /* Efecto de zoom */
+}
+
+.ContenedorImagenes img:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+/*estilo para los h2 como de brochasos*/
+/* Estilo para los h2 con efecto de brocha */
+h2 {
+    font-family: 'Arial', sans-serif; /* Fuente de los títulos */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); /* Gradiente de colores */
+    -webkit-background-clip: text; /* Clip del fondo en el texto */
+    -webkit-text-fill-color: transparent; /* Relleno del texto transparente */
+    text-align: center; /* Centra el texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    padding: 5px; /* Espacio alrededor del texto */
+}
+
+/* Estilo para el contenedor de imágenes */
+.ContenedorImagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Espacio entre los contenedores */
+}
+
+/* Estilo para las imágenes */
+.ContenedorImagenes img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 8px; /* Bordes redondeados */
+}
