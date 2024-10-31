@@ -31,14 +31,21 @@
     }
 
 
-    /* Estilos para pantallas móviles */
-    @media (max-width: 768px) {
-        /* Alineación del botón de menú a la derecha */
-        .navbar-toggler {
-            position: absolute; /* Posición absoluta para moverlo */
-            right: 20px; /* Ajusta la distancia desde la derecha */
-            top: 15px; /* Ajusta la distancia desde la parte superior */
-        }
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex; /* Utiliza flexbox */
+        justify-content: space-between; /* Espacio entre los elementos */
+        align-items: center; /* Alinea verticalmente al centro */
+        padding-top: 15px; /* Ajusta el padding superior */
+    }
+    
+    .navbar-toggler {
+        margin-top: 25px; /* Margen superior para mover hacia abajo */
+    }
+}
+
+
 
         #botonInicio .nav-link,
         #botonServicios .nav-link,
@@ -53,7 +60,7 @@
             transition: background-color 0.3s; /* Transición suave para el cambio de color */
         }
             
-        }
+    
 
         /* Colores de fondo específicos para móviles */
         #botonInicio .nav-link {
@@ -75,23 +82,19 @@
         }
 
 
-
-    /* Parte del nombre y logo de la empresa */
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
     #nombreEmpresa {
-        position: relative; /* Cambiado a relative para evitar problemas de posicionamiento */
+        position: relative; /* Mantener como 'relative' */
         color: black;
-        padding: 5px;
+        padding: 10px; /* Mantener el padding */
         z-index: 1000;
+        font-size: 20px; /* Tamaño de fuente ajustado */
+        background-color: white; /* Fondo blanco */
+        transform: translateX(73px); /* Mueve el logo más a la derecha */
     }
+}
 
-    /* Ajustes de header en móviles */
-    @media (max-width: 768px) {
-        #nombreEmpresa {
-            font-size: 20px;
-            background-color:white;
-            padding: 8px;
-        }
-    }
 
     /*configuraciones ´para el nav-bar*/
 
