@@ -240,22 +240,36 @@
     justify-content: center; /* Centra horizontalmente el texto */
 }
 
-/* Configuración de fondo de cada botón */
+/* Estilos para el botón de Inicio */
 #BotonInicio .nav-link {
     background-color: #f1be49;
     margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(244, 211, 94, 0.6); /* Sombra con tono amarillo, más difuminada */
 }
+
+/* Estilos para el botón de Servicios */
 #BotonServicios .nav-link {
     background-color: #317039;
     margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(49, 112, 57, 0.6); /* Sombra con tono verde, más difuminada */
 }
+
+/* Estilos para el botón de Galería */
 #BotonGaleria .nav-link {
     background-color: #db4b09;
     margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(219, 75, 9, 0.6); /* Sombra con tono naranja, más difuminada */
 }
+
+/* Estilos para el botón de Contacto */
 #BotonContacto .nav-link {
     background-color: #f1be49;
     margin: 20px;
+    border: none;
+    box-shadow: 0px 12px 30px rgba(244, 211, 94, 0.6); /* Sombra con tono amarillo, más difuminada */
 }
 
 /* Estilo para dispositivos móviles */
