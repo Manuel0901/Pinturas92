@@ -30,19 +30,22 @@
     border-radius: 4px; /* Bordes redondeados */
     box-sizing: border-box; /* Incluimos el padding en el ancho total */
 }
-s/* Estilo para el botón */
+
+/* Estilo para el botón */
 .Formulario button {
-    background-color: #007bffbe; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 4px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiamos el cursor al pasar sobre el botón */
-    font-size: 16px; /* Tamaño de fuente */
-    transition: background-color 0.3s; /* Transición suave */
+    background-color: #316be7; /* Color terracota para el botón */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 /* Efecto al pasar el mouse sobre el botón */
 .Formulario button:hover {
-    background-color: #0057b36c; /* Color de fondo al pasar el mouse */
+    background-color: #349ebe; /* Color más oscuro al pasar el mouse */
 }
+
+
