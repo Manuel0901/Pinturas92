@@ -241,7 +241,7 @@
 }
 
 /* Estilos para el botón de Inicio */
-#BotonInicio .nav-link {
+#BotonInicio .nav-link:hover {
     background-color: #f1be49;
     margin: 20px;
     border: none;
@@ -465,6 +465,12 @@ h2 {
     border-radius: 8px; /* Bordes redondeados */
 }
 /*espacio especifico para apple*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 
 /* Estilos específicos para Safari en iOS */
 @supports (-webkit-touch-callout: none) {
