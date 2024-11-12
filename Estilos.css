@@ -241,7 +241,7 @@
 }
 
 /* Estilos para el botón de Inicio */
-#BotonInicio .nav-link:hover {
+#BotonInicio .nav-link {
     background-color: #f1be49;
     margin: 20px;
     border: none;
