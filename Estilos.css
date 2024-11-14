@@ -9,7 +9,7 @@
     /* Estilos para el header */
     header {
         background-color: white;
-        color: white; /* Cambiado a black para mayor legibilidad */
+        color: white; 
     }
    
 
@@ -463,38 +463,4 @@ h2 {
     width: 100%; /* Ajusta el ancho de la imagen */
     height: auto; /* Mantiene la relación de aspecto */
     border-radius: 8px; /* Bordes redondeados */
-}
-/*espacio especifico para apple*/
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-
-/* Estilos específicos para Safari en iOS */
-@supports (-webkit-touch-callout: none) {
-    /* Ajusta el tamaño del logo para Safari */
-    .header img {
-        width: 80%; /* Ajusta este valor según sea necesario */
-        max-width: 300px; /* Limita el tamaño máximo del logo */
-    }
-
-    /* Ajusta los botones en Safari */
-    .botones {
-        width: 90%; /* Ajusta el ancho */
-        font-size: 16px; /* Asegura que el tamaño de fuente sea consistente */
-        padding: 10px 20px; /* Ajusta el padding si es necesario */
-    }
-}
-
-@media screen and (max-device-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
-    /* Ajustes específicos para iPhone */
-    .header img {
-        width: 75%; /* Ajusta según sea necesario */
-    }
-    .botones {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
 }
