@@ -464,3 +464,31 @@ h2 {
     height: auto; /* Mantiene la relación de aspecto */
     border-radius: 8px; /* Bordes redondeados */
 }
+/*estilos esécificos para safary apple*/
+/* Ajuste general del header */
+.header {
+    position: relative; /* Cambié de absolute a relative para mayor compatibilidad */
+    margin-top: 20%; /* Ajusta según tu diseño */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
+    padding: 20px;
+    width: 100%; /* Ocupa el ancho completo */
+}
+
+/* Compatibilidad con Safari */
+@supports (-webkit-backdrop-filter: blur(0)) {
+    .header {
+        display: block;
+        width: auto; /* Safari a veces maneja mal valores porcentuales en ciertos casos */
+        margin: 0 auto; /* Centrar */
+    }
+}
+
+/* Estilo adicional para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+        font-size: 14px; /* Ajusta la fuente */
+    }
+}
+
