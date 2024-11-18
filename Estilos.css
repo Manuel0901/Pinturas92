@@ -465,30 +465,31 @@ h2 {
     border-radius: 8px; /* Bordes redondeados */
 }
 /*estilos esécificos para safary apple*/
-/* Ajuste general del header */
 .header {
-    position: relative; /* Cambié de absolute a relative para mayor compatibilidad */
-    margin-top: 20%; /* Ajusta según tu diseño */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column;
+    height: auto; /* Asegura que el alto se ajuste al contenido */
+    margin-top: 20%; /* Ajusta según sea necesario */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
     padding: 20px;
-    width: 100%; /* Ocupa el ancho completo */
+    width: 70%; /* Ocupa un ancho del 70% */
+    margin: 0 auto; /* Asegura que esté centrado */
 }
-
-/* Compatibilidad con Safari */
-@supports (-webkit-backdrop-filter: blur(0)) {
-    .header {
-        display: block;
-        width: auto; /* Safari a veces maneja mal valores porcentuales en ciertos casos */
-        margin: 0 auto; /* Centrar */
+.header {
+    width: 70%;
+    -webkit-width: 70%; /* Safari */
+    max-width: 100%; /* Asegura que no se desborde */
+    -webkit-max-width: 100%; /* Safari */
+}
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+        .header {
+            /* Ajustes específicos para Safari */
+            padding: 15px;
+            font-size: 16px;
+        }
     }
 }
-
-/* Estilo adicional para pantallas pequeñas */
-@media (max-width: 768px) {
-    .header {
-        padding: 15px;
-        font-size: 14px; /* Ajusta la fuente */
-    }
-}
-
