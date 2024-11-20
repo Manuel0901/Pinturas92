@@ -1,16 +1,84 @@
-.contenedor-imagenes {
-   display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    transition: transform 0.3s ease; /* Efecto de zoom */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8edd9; /* Fondo claro */
 }
 
-.item {
-    text-align: center;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
 }
 
-.item img {
-    width: 150px;  
-    height: 150px; 
-    object-fit: cover; /* Ajusta la imagen al tamaño del tamaño del contenedor */
+.gallery img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+/* Botón de cierre */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-close:hover {
+    background: #f8edd9;
+}
+
+/*configuracion especifica para safari*/
+@supports (-webkit-touch-callout: none) {
+    .gallery img {
+        max-width: 95%; /* Ajuste específico para Safari */
+        margin: 0 auto;
+    }
+
+    .lightbox img {
+        max-height: 80%; /* Evita desbordes en Safari */
+    }
 }

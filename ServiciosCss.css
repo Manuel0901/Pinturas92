@@ -1,0 +1,17 @@
+.contenedor-imagenes {
+    display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+     transition: transform 0.3s ease; /* Efecto de zoom */
+ }
+ 
+ .item {
+     text-align: center;
+ }
+ 
+ .item img {
+     width: 150px;  
+     height: 150px; 
+     object-fit: cover; /* Ajusta la imagen al tamaño del tamaño del contenedor */
+ }
+ 
