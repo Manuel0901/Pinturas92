@@ -409,7 +409,7 @@ footer p {
 /* Contenedor de la cuadrícula de imágenes */
 .ContenedorImagenes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas para los dos contenedores */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     gap: 20px;
     justify-items: center;
     margin-top: 20px;
@@ -421,75 +421,59 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Espacio entre las imágenes dentro de cada contenedor */
-    max-width: 250px; /* Controla el ancho del contenedor */
+    max-width: 150px; /* Controla el ancho del contenedor */
 }
 
 /* Estilo para las imágenes */
 .ContenedorImagenes img {
-    width: 100%; /* Ajusta la imagen al ancho del contenedor */
-    height: auto;
-    object-fit: cover;
+    width: 100%; /* Adapta la imagen al ancho del contenedor */
+    max-width: 250px; /* Tamaño máximo para asegurar consistencia */
+    height: auto; /* Mantiene la proporción */
+    aspect-ratio: 4 / 3; /* Relación de aspecto fija (opcional) */
+    object-fit: cover; /* Recorta la imagen para ajustarla al contenedor */
     border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para armonizar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: transform 0.3s ease; /* Efecto de zoom */
 }
 
+/* Hover con zoom */
 .ContenedorImagenes img:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+    transform: scale(1.05); /* Aumenta un poco al pasar el ratón */
 }
 
-/* Estilo para los h2 con efecto de brocha */
+/* Títulos con efecto de brocha */
 h2 {
-    font-family: 'Arial', sans-serif; /* Fuente de los títulos */
-    font-size: 24px; /* Tamaño de fuente */
-    font-weight: bold; /* Peso de la fuente */
-    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); /* Gradiente de colores */
-    -webkit-background-clip: text; /* Clip del fondo en el texto */
-    -webkit-text-fill-color: transparent; /* Relleno del texto transparente */
-    text-align: center; /* Centra el texto */
-    margin: 10px 0; /* Margen superior e inferior */
-    padding: 5px; /* Espacio alrededor del texto */
-}
-
-/* Estilo para el contenedor de imágenes */
-.ContenedorImagenes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Espacio entre los contenedores */
-}
-
-/* Estilo para las imágenes */
-.ContenedorImagenes img {
-    width: 100%; /* Ajusta el ancho de la imagen */
-    height: auto; /* Mantiene la relación de aspecto */
-    border-radius: 8px; /* Bordes redondeados */
-}
-/*estilos esécificos para safary apple*/
-.header {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    flex-direction: column;
-    height: auto; /* Asegura que el alto se ajuste al contenido */
-    margin-top: 20%; /* Ajusta según sea necesario */
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo transparente */
-    padding: 20px;
-    width: 70%; /* Ocupa un ancho del 70% */
-    margin: 0 auto; /* Asegura que esté centrado */
+    margin: 10px 0;
+    padding: 5px;
 }
-.header {
-    width: 70%;
-    -webkit-width: 70%; /* Safari */
-    max-width: 100%; /* Asegura que no se desborde */
-    -webkit-max-width: 100%; /* Safari */
-}
-@media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) {
-        .header {
-            /* Ajustes específicos para Safari */
-            padding: 15px;
-            font-size: 16px;
-        }
+
+
+/*estilos esécificos para safary apple*/
+
+@media (max-widt: 768px){
+    body{
+        font-size: 12px;
     }
+
+}
+/*estilos mas especificos*/
+
+
+@media (max-width: 375px){
+    body{
+        font-size: 12px;
+
+    }
+    .boton{
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
 }
