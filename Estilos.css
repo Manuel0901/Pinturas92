@@ -6,20 +6,65 @@
         text-align: center;
     }
 
-    /* Estilos para el header */
-    header {
-        background-color: white;
-        color: white; 
-    }
-   
+    /* Estilos generales */
+.header {
+    display: flex;
+    flex-direction: column; /* Organiza elementos verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+    padding: 20px;
+}
 
-    /* Colores de fondo específicos */
+.header img {
+    max-width: 100%; /* Ajusta el tamaño del logo a la pantalla */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px; /* Reduce el espacio alrededor en móviles */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Ajusta el tamaño del texto principal */
+    }
+
+    .header p {
+        font-size: 14px; /* Ajusta el tamaño del subtítulo */
+    }
+}
+.navbar-toggler {
+    margin-top: 25px; /* Margen superior para mover hacia abajo */
+}
+
+
+
+
+    #botonInicio .nav-link,
+    #botonServicios .nav-link,
+    #botonGaleria .nav-link,
+    #botonContacto .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+        padding: 10px 20px; /* Relleno para que se vea como un botón */
+        border-radius: 5px; /* Bordes redondeados */
+        color: #ffffff; /* Color de texto blanco */
+        transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    }
+        
+
+
+    /* Colores de fondo específicos para móviles */
     #botonInicio .nav-link {
         background-color: #f1be49; /* Color de fondo */
+        hover:rgb(57, 161, 71);
     }
 
     #botonServicios .nav-link {
         background-color: #317039; /* Color de fondo */
+        hover:rgb(57, 161, 71);
     }
 
     #botonGaleria .nav-link {
@@ -31,57 +76,8 @@
     }
 
 
-/* Estilos para pantallas móviles */
-@media (max-width: 768px) {
-    .navbar {
-        display: flex; /* Utiliza flexbox */
-        justify-content: space-between; /* Espacio entre los elementos */
-        align-items: center; /* Alinea verticalmente al centro */
-        padding-top: 15px; /* Ajusta el padding superior */
-    }
-    
-    .navbar-toggler {
-        margin-top: 25px; /* Margen superior para mover hacia abajo */
-    }
-}
 
-
-
-        #botonInicio .nav-link,
-        #botonServicios .nav-link,
-        #botonGaleria .nav-link,
-        #botonContacto .nav-link {
-            max-width: 150px; /* Ancho máximo del botón */
-            width: 100%; /* El botón ocupa el 100% del ancho disponible */
-            margin: 10px auto; /* Centra el botón horizontalmente */
-            padding: 10px 20px; /* Relleno para que se vea como un botón */
-            border-radius: 5px; /* Bordes redondeados */
-            color: #ffffff; /* Color de texto blanco */
-            transition: background-color 0.3s; /* Transición suave para el cambio de color */
-        }
-            
-    
-
-        /* Colores de fondo específicos para móviles */
-        #botonInicio .nav-link {
-            background-color: #f1be49; /* Color de fondo */
-            hover:rgb(57, 161, 71);
-        }
-
-        #botonServicios .nav-link {
-            background-color: #317039; /* Color de fondo */
-            hover:rgb(57, 161, 71);
-        }
-
-        #botonGaleria .nav-link {
-            background-color: rgb(255, 51, 0); /* Color de fondo */
-        }
-
-        #botonContacto .nav-link {
-            background-color: #f1be49; /* Color de fondo */
-        }
-
-
+   
 /* Estilos para pantallas móviles */
 @media (max-width: 768px) {
     #nombreEmpresa {
@@ -119,7 +115,7 @@
     z-index: 10; /* Un valor alto para asegurarse de que esté sobre otros elementos */
 }
 
-/* Si quieres que la barra se quede fija en la parte superior mientras haces scroll */
+/* mantiene la barra superior fija mientras se scrolea */
 @media (max-width: 768px) {
     .navbar {
         position: fixed; /* Fija la barra en la parte superior de la pantalla */
@@ -466,14 +462,3 @@ h2 {
 /*estilos mas especificos*/
 
 
-@media (max-width: 375px){
-    body{
-        font-size: 12px;
-
-    }
-    .boton{
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    
-}

@@ -1,0 +1,75 @@
+ /* Estilos para el header */
+ header {
+    background-color: white;
+    color: white; 
+}
+
+
+/* Colores de fondo específicos */
+#botonInicio .nav-link {
+    background-color: #f1be49; /* Color de fondo */
+}
+
+#botonServicios .nav-link {
+    background-color: #317039; /* Color de fondo */
+}
+
+#botonGaleria .nav-link {
+    background-color: rgb(255, 51, 0); /* Color de fondo */
+}
+
+#botonContacto .nav-link {
+    background-color: #f1be49; /* Color de fondo */
+}
+
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+.navbar {
+    display: flex; /* Utiliza flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente al centro */
+    padding-top: 15px; /* Ajusta el padding superior */
+}
+
+.navbar-toggler {
+    margin-top: 25px; /* Margen superior para mover hacia abajo */
+}
+}
+
+
+
+    #botonInicio .nav-link,
+    #botonServicios .nav-link,
+    #botonGaleria .nav-link,
+    #botonContacto .nav-link {
+        max-width: 150px; /* Ancho máximo del botón */
+        width: 100%; /* El botón ocupa el 100% del ancho disponible */
+        margin: 10px auto; /* Centra el botón horizontalmente */
+        padding: 10px 20px; /* Relleno para que se vea como un botón */
+        border-radius: 5px; /* Bordes redondeados */
+        color: #ffffff; /* Color de texto blanco */
+        transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    }
+        
+
+
+    /* Colores de fondo específicos para móviles */
+    #botonInicio .nav-link {
+        background-color: #f1be49; /* Color de fondo */
+        hover:rgb(57, 161, 71);
+    }
+
+    #botonServicios .nav-link {
+        background-color: #317039; /* Color de fondo */
+        hover:rgb(57, 161, 71);
+    }
+
+    #botonGaleria .nav-link {
+        background-color: rgb(255, 51, 0); /* Color de fondo */
+    }
+
+    #botonContacto .nav-link {
+        background-color: #f1be49; /* Color de fondo */
+    }
+
