@@ -1,75 +1,85 @@
- /* Estilos para el header */
- header {
-    background-color: white;
-    color: white; 
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;
 }
 
-
-/* Colores de fondo específicos */
-#botonInicio .nav-link {
-    background-color: #f1be49; /* Color de fondo */
+.header {
+    margin-top: 20px;
+    text-align: center;
 }
 
-#botonServicios .nav-link {
-    background-color: #317039; /* Color de fondo */
+.logo {
+    max-width: 150px; /* Ajusta el tamaño del logo */
 }
 
-#botonGaleria .nav-link {
-    background-color: rgb(255, 51, 0); /* Color de fondo */
+.header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
 }
 
-#botonContacto .nav-link {
-    background-color: #f1be49; /* Color de fondo */
+.header p {
+    font-size: 14px;
+    color: #555555;
+    font-style: italic;
+    margin-top: -10px; /* Para ajustar el espacio */
 }
 
+/* Estilo de los botones */
+.menu button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Colores de los botones */
+.menu button:nth-child(1) {
+    background-color: #f9c74f; /* Amarillo */
+}
+
+.menu button:nth-child(2) {
+    background-color: #43aa8b; /* Verde */
+}
+
+.menu button:nth-child(3) {
+    background-color: #f94144; /* Rojo */
+}
+
+.menu button:nth-child(4) {
+    background-color: #f8961e; /* Naranja */
+}
+
+/* Efectos al pasar el mouse */
+.menu button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* Estilos para pantallas móviles */
 @media (max-width: 768px) {
-.navbar {
-    display: flex; /* Utiliza flexbox */
-    justify-content: space-between; /* Espacio entre los elementos */
-    align-items: center; /* Alinea verticalmente al centro */
-    padding-top: 15px; /* Ajusta el padding superior */
+    .header h1 {
+        font-size: 22px; /* Ajusta el tamaño del texto */
+    }
+
+    .header p {
+        font-size: 12px; /* Ajusta el tamaño del subtítulo */
+    }
+
+    .menu button {
+        width: 180px; /* Reduce el ancho de los botones */
+        padding: 10px 20px;
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+    }
 }
-
-.navbar-toggler {
-    margin-top: 25px; /* Margen superior para mover hacia abajo */
-}
-}
-
-
-
-    #botonInicio .nav-link,
-    #botonServicios .nav-link,
-    #botonGaleria .nav-link,
-    #botonContacto .nav-link {
-        max-width: 150px; /* Ancho máximo del botón */
-        width: 100%; /* El botón ocupa el 100% del ancho disponible */
-        margin: 10px auto; /* Centra el botón horizontalmente */
-        padding: 10px 20px; /* Relleno para que se vea como un botón */
-        border-radius: 5px; /* Bordes redondeados */
-        color: #ffffff; /* Color de texto blanco */
-        transition: background-color 0.3s; /* Transición suave para el cambio de color */
-    }
-        
-
-
-    /* Colores de fondo específicos para móviles */
-    #botonInicio .nav-link {
-        background-color: #f1be49; /* Color de fondo */
-        hover:rgb(57, 161, 71);
-    }
-
-    #botonServicios .nav-link {
-        background-color: #317039; /* Color de fondo */
-        hover:rgb(57, 161, 71);
-    }
-
-    #botonGaleria .nav-link {
-        background-color: rgb(255, 51, 0); /* Color de fondo */
-    }
-
-    #botonContacto .nav-link {
-        background-color: #f1be49; /* Color de fondo */
-    }
-
