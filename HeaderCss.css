@@ -1,85 +1,118 @@
-/* Estilos generales */
-body {
+/* Estilo general del header */
+header {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #ffffff;
+    margin-bottom: 200px;
 }
 
-.header {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.logo {
+/* Nombre de la empresa con logo */
+#nombreEmpresa img {
     max-width: 150px; /* Ajusta el tamaño del logo */
+    height: auto;
 }
 
-.header h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #000000;
+/* Navbar */
+.navbar {
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle más profundidad */
+    display: flex;
+    align-items: center; /* Alinea verticalmente todos los elementos */
+    justify-content: space-between; /* Espaciado entre logo y menú */
 }
 
-.header p {
-    font-size: 14px;
-    color: #555555;
-    font-style: italic;
-    margin-top: -10px; /* Para ajustar el espacio */
+/* Contenedor del logo */
+#nombreEmpresa {
+    display: flex;
+    align-items: center; /* Asegura que el logo esté centrado verticalmente */
 }
 
-/* Estilo de los botones */
-.menu button {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-    padding: 12px 24px;
+/* Botón de hamburguesa centrado al nivel del logo */
+.navbar-toggler {
+    height: 40px; /* Ajusta el tamaño del botón */
+    width: 60px;
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 0; /* Sin márgenes */
+    order: 0.1; /* Mantiene el botón al lado derecho del logo */
+    
+}
+
+/* Icono del botón de hamburguesa */
+.navbar-toggler-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1828/1828859.png'); /* Icono personalizado */
+    background-size: cover;
+}
+
+/* Menú desplegable */
+.collapse {
+    flex-grow: 1; /* Asegura que el menú no colapse el diseño */
+    text-align: right; /* Alinea el menú al lado derecho */
+}
+
+/* Botones del menú */
+.nav-link {
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
-    border: none;
+    color: #333;
+    margin: 0 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background-color: #f0a500; /* Color al pasar el cursor */
     border-radius: 5px;
+}
+
+/* Icono lupa */
+.icon-lupa {
+    max-width: 30px; /* Ajusta el tamaño de la lupa */
+    height: auto;
+    margin-left: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Colores de los botones */
-.menu button:nth-child(1) {
-    background-color: #f9c74f; /* Amarillo */
+/* Carrusel */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover; /* Ajusta las imágenes para que no pierdan proporción */
 }
 
-.menu button:nth-child(2) {
-    background-color: #43aa8b; /* Verde */
+/* Separador */
+.separador {
+    height: 2px;
+    background-color: #f0a500; /* Color amarillo para el separador */
+    margin: 10px 0;
 }
 
-.menu button:nth-child(3) {
-    background-color: #f94144; /* Rojo */
-}
-
-.menu button:nth-child(4) {
-    background-color: #f8961e; /* Naranja */
-}
-
-/* Efectos al pasar el mouse */
-.menu button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilos para pantallas móviles */
+/* Estilo para pantallas móviles */
 @media (max-width: 768px) {
-    .header h1 {
-        font-size: 22px; /* Ajusta el tamaño del texto */
+    #nombreEmpresa img {
+        max-width: 120px; /* Reduce el tamaño del logo en pantallas pequeñas */
     }
 
-    .header p {
-        font-size: 12px; /* Ajusta el tamaño del subtítulo */
+    .navbar {
+        flex-wrap: nowrap; /* Evita que los elementos salten a otra línea */
     }
 
-    .menu button {
-        width: 180px; /* Reduce el ancho de los botones */
-        padding: 10px 20px;
-        font-size: 14px; /* Reduce el tamaño de la fuente */
+    .navbar-toggler {
+        order: 1; /* Asegura que el botón siga junto al logo */
+    }
+
+    .collapse {
+        text-align: center; /* Centra los elementos del menú desplegado */
+    }
+
+    .nav-link {
+        font-size: 14px; /* Reduce el tamaño del texto */
+        margin: 5px 0;
+    }
+
+    .icon-lupa {
+        max-width: 25px; /* Ajusta el tamaño de la lupa */
+    }
+
+    .carousel-item img {
+        max-height: 300px; /* Ajusta el tamaño del carrusel en móviles */
     }
 }
