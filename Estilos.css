@@ -442,7 +442,7 @@ h2 {
     font-family: 'Arial', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;

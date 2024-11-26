@@ -7,10 +7,13 @@
         <!-- Estilo CSS -->
         <link rel="stylesheet" href="Estilos.css">
         <link rel="stylesheet" href="GaleriaCss.css">
+        <link rel="stylesheet" href="HeaderCss.css">
         <!-- Agrega Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!--icono-->
         <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+        <!--agregados JS-->
+        <script src="GaleriaJs.js" defer></script>
 
     </head>
 
@@ -42,7 +45,7 @@
                             </li>
                             <li class="nav-item">
                                 <div id="BotonServicios">
-                                <a class="nav-link btn-servicios" href="Servicios.html">Servicios</a>
+                                <a class="nav-link btn-servicios" href="Servicios.html">Services</a>
                             </div>
                             </li>
                             <div id="BotonGaleria">
@@ -67,55 +70,49 @@
 <div class="separador"></div>
 
         </header>
-<!-- Galería -->
-<div class="gallery">
-    <a href="#img1"><img src="RecursosVisuales/casa2.jpg" alt="Imagen 1"></a>
-    <a href="#img2"><img src="RecursosVisuales/image00009.webp" alt="Imagen 2"></a>
-    <a href="#img3"><img src="RecursosVisuales/image00015.webp" alt="Imagen 3"></a>
-    <a href="#img4"><img src="RecursosVisuales/image00012.webp" alt="Imagen 4"></a>
-</div>
-
-<!-- Lightbox -->
-<div class="lightbox" id="img1">
-    <button class="lightbox-close" onclick="history.back()">x</button>
-    <img src="RecursosVisuales/casa2.jpg" alt="Imagen 1">
-</div>
-<div class="lightbox" id="img2">
-    <button class="lightbox-close" onclick="history.back()">x</button>
-    <img src="RecursosVisuales/image00009.webp" alt="Imagen 2">
-</div>
-<div class="lightbox" id="img3">
-    <button class="lightbox-close" onclick="history.back()">x</button>
-    <img src="RecursosVisuales/image00015.webp" alt="Imagen 3">
-</div>
-<div class="lightbox" id="img4">
-    <button class="lightbox-close" onclick="history.back()">x</button>
-    <img src="RecursosVisuales/image00012.webp" alt="Imagen 4">
-</div>
-
-<footer>
-    <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
-    <div id="Contactos">
-        <div class="iconoRedSocial">
-            <img src="RecursosVisuales/whatsap.png" alt="WhatsApp">
-        </div>
-        <div class="iconoRedSocial">
-            <img src="RecursosVisuales/facebook.png" alt="Facebook">
-        </div>
-        <div class="iconoRedSocial">
-            <img src="RecursosVisuales/tiktok.png" alt="TikTok">
+            
+        <h1>NUESTRA GALERIA</h1>
+     <!-- Carrusel 3D -->
+     <div class="carousel-3d">
+        <div class="carousel-3d-inner">
+            <img src="RecursosVisuales/casa3.jpg" alt="Imagen 1">
+            <img src="RecursosVisuales/image00006.webp" alt="Imagen 2">
+            <img src="RecursosVisuales/image00008.webp" alt="Imagen 3">
+            <img src="RecursosVisuales/image00013.jpeg" alt="Imagen 4">
+            <img src="RecursosVisuales/image00004.webp" alt="Imagen 5">
+            <img src="RecursosVisuales/image00001.webp" alt="Imagen 6">
         </div>
     </div>
-</footer>
-<!-- Agrega Bootstrap JS y Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // opcion para cerrar con tecla "Escape"
-    document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape") {
-            window.location.hash = "";
-        }
-    });
-</script>
+
+    <!--aqui va el carrusel o caja oculta de aumento-->
+    <!-- Lightbox -->
+<div id="lightbox" class="lightbox hidden">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+    <div class="lightbox-controls">
+        <button id="prev-btn">&larr;</button>
+        <button id="next-btn">&rarr;</button>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
+        <div id="Contactos">
+            <div class="iconoRedSocial">
+                <img src="RecursosVisuales/whatsap.png" alt="WhatsApp">
+            </div>
+            <div class="iconoRedSocial">
+                <img src="RecursosVisuales/facebook.png" alt="Facebook">
+            </div>
+            <div class="iconoRedSocial">
+                <img src="RecursosVisuales/tiktok.png" alt="TikTok">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+
     </body>
 </html>
