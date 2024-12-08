@@ -79,29 +79,31 @@
 <div class="separador"></div>
         </header>
         <h2>Contact Us</h2>
-<div class="Formulario">
-    <form action="your-action-url" method="post">
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required style="text-align: center;">
+        <div class="Formulario">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required style="text-align: center;">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone"required style="text-align: center;">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required style="text-align: center;">
+                </div>
+                <div class="form-group">
+                    <label for="message">Questions / Description:</label>
+                    <textarea id="message" name="message" rows="4" required style="text-align: center;"></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+            <div id="responseMessage"></div>
         </div>
-        <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Questions / Description:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <div>
-            <button type="submit">Send</button>
-        </div>
-    </form>
-</div>
+        
 <footer>
     <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
     <div id="Contactos">

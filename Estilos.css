@@ -388,7 +388,7 @@ footer p {
         border: none !important; /* Elimina cualquier borde que Bootstrap pueda aplicar */
     }
     /*estilo para las imagenes*/
-/* Estilos generales */
+
 .main-content {
     text-align: center;
     margin: 40px auto;
@@ -417,7 +417,7 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Espacio entre las imágenes dentro de cada contenedor */
-    max-width: 150px; /* Controla el ancho del contenedor */
+    max-width: 250px; /* Controla el ancho del contenedor */
 }
 
 /* Estilo para las imágenes */
@@ -437,18 +437,7 @@ footer p {
     transform: scale(1.05); /* Aumenta un poco al pasar el ratón */
 }
 
-/* Títulos con efecto de brocha */
-h2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    background: black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    margin: 10px 0;
-    padding: 5px;
-}
+
 
 
 /*estilos esécificos para safary apple*/
@@ -459,6 +448,24 @@ h2 {
     }
 
 }
-/*estilos mas especificos*/
+/*Estilos */
+#TituloL {
+    text-align: center; /* Centrar el título */
+    font-size: 10.5rem; /* Tamaño del texto, ajusta según sea necesario */
+    margin: 10px 0; /* Margen para separarlo de otros elementos */
+}
 
+#TituloL img {
+    width: 350px; /* Ajusta el tamaño de la imagen */
+    height: 350x; /* Mantén la proporción */
+}
+/*configuraciones para pantallas moviles*/
+@media (max-width: 768px) {
+    #TituloL {
+        font-size: 1rem; /* Reduce aún más el tamaño en pantallas pequeñas */
+    }
 
+    #TituloL img {
+        width: 250px; /* Ajusta el ancho para pantallas pequeñas */
+    }
+}
