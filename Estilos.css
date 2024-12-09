@@ -391,7 +391,7 @@ footer p {
 
 .main-content {
     text-align: center;
-    margin: 40px auto;
+    margin: 20px auto;
     width: 80%;
 }
 
@@ -418,19 +418,19 @@ footer p {
     flex-direction: column;
     gap: 15px; /* Espacio entre las imágenes dentro de cada contenedor */
     max-width: 250px; /* Controla el ancho del contenedor */
+
+}
+#Contenedor1,
+#Contenedor2 {
+    max-width: 300px; /* Ancho mayor para pantallas grandes */
 }
 
-/* Estilo para las imágenes */
 .ContenedorImagenes img {
-    width: 100%; /* Adapta la imagen al ancho del contenedor */
-    max-width: 250px; /* Tamaño máximo para asegurar consistencia */
-    height: auto; /* Mantiene la proporción */
-    aspect-ratio: 4 / 3; /* Relación de aspecto fija (opcional) */
-    object-fit: cover; /* Recorta la imagen para ajustarla al contenedor */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: transform 0.3s ease; /* Efecto de zoom */
+    width: 100%; /* Asegura que las imágenes se ajusten al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
 }
+
+
 
 /* Hover con zoom */
 .ContenedorImagenes img:hover {
