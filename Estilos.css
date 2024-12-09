@@ -389,10 +389,11 @@ footer p {
     }
     /*estilo para las imagenes*/
 
+/* Estilo principal */
 .main-content {
     text-align: center;
     margin: 20px auto;
-    width: 80%;
+    width: 50%; /* Más flexible para pantallas pequeñas */
 }
 
 /* Estilo para los títulos */
@@ -418,17 +419,37 @@ footer p {
     flex-direction: column;
     gap: 15px; /* Espacio entre las imágenes dentro de cada contenedor */
     max-width: 250px; /* Controla el ancho del contenedor */
-
-}
-#Contenedor1,
-#Contenedor2 {
-    max-width: 300px; /* Ancho mayor para pantallas grandes */
 }
 
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+    #Contenedor1,
+    #Contenedor2 {
+        max-width: 300px; /* Ancho mayor para pantallas grandes */
+    }
+}
+
+/* Estilo para las imágenes */
 .ContenedorImagenes img {
-    width: 100%; /* Asegura que las imágenes se ajusten al tamaño del contenedor */
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
     height: auto; /* Mantiene la proporción de las imágenes */
+    
+    box-sizing: border-box; /* Incluye el borde en las dimensiones totales */
 }
+
+/* Estilos específicos para pantallas móviles */
+@media (max-width: 768px) {
+    .ContenedorImagenes {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    #Contenedor1,
+    #Contenedor2 {
+        max-width: 100%; /* El contenedor ocupa todo el ancho */
+    }
+
+}
+
 
 
 
