@@ -393,7 +393,7 @@ footer p {
 .main-content {
     text-align: center;
     margin: 20px auto;
-    width: 50%; /* Más flexible para pantallas pequeñas */
+    width: 75%; /* Más flexible para pantallas pequeñas */
 }
 
 /* Estilo para los títulos */
@@ -471,15 +471,22 @@ footer p {
 }
 /*Estilos */
 #TituloL {
-    text-align: center; /* Centrar el título */
-    font-size: 10.5rem; /* Tamaño del texto, ajusta según sea necesario */
-    margin: 10px 0; /* Margen para separarlo de otros elementos */
+    display: flex; /* Activa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto internamente */
+    font-size: 10.5rem; /* Tamaño del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    height: 100vh; /* Opcional: ocupa toda la altura de la pantalla */
 }
 
+/* Estilo para la imagen dentro del título */
 #TituloL img {
     width: 350px; /* Ajusta el tamaño de la imagen */
-    height: 350x; /* Mantén la proporción */
+    height: 350px; /* Mantén las proporciones */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
 }
+
 /*configuraciones para pantallas moviles*/
 @media (max-width: 768px) {
     #TituloL {
