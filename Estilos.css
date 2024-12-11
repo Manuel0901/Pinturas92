@@ -237,7 +237,7 @@
 }
 
 /* Estilos para el botón de Inicio */
-#BotonInicio .nav-link {
+#BotonInicio .nav-link{
     background-color: #f1be49;
     margin: 20px;
     border: none;
@@ -276,7 +276,6 @@
 }
 
 
-    /* Carrusel */
     /* Estilo de la barra de menú */
 .navbar {
     position: relative; /* Asegúrate de que la barra de menú tenga un contexto de apilamiento */
@@ -294,7 +293,8 @@
     /* Color de los íconos de navegación del carrusel */
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        background-color: #f1be49; /* Cambia el color de la flecha a blanco */
+        background-color: #317039; /* Cambia el color de la flecha a blanco */
+        border-radius: 50%;
     }
 
     .carousel-item img {
@@ -303,9 +303,7 @@
         display: block;
         margin: 0 auto;
     }
-    #carousel-control-next{
-        color: black;
-    }
+    
 
 
     /* Contenedor principal para contenido */
@@ -468,23 +466,6 @@ footer p {
         font-size: 12px;
     }
 
-}
-/*Estilos */
-#TituloL {
-    display: flex; /* Activa flexbox para centrar */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    text-align: center; /* Centra el texto internamente */
-    font-size: 10.5rem; /* Tamaño del texto */
-    margin: 10px 0; /* Margen superior e inferior */
-    height: 100vh; /* Opcional: ocupa toda la altura de la pantalla */
-}
-
-/* Estilo para la imagen dentro del título */
-#TituloL img {
-    width: 350px; /* Ajusta el tamaño de la imagen */
-    height: 350px; /* Mantén las proporciones */
-    object-fit: contain; /* Asegura que la imagen no se deforme */
 }
 
 /*configuraciones para pantallas moviles*/

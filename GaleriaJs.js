@@ -1,35 +1,16 @@
-// Selecciona las imágenes de la galería y el modal
-const images = document.querySelectorAll('.gallery img');
-const modal = document.createElement('div');
-modal.classList.add('image-modal');
-document.body.appendChild(modal);
+// Abre el modal y muestra la imagen seleccionada
+function openModal(image) {
+    const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modal-image");
+    const captionText = document.getElementById("caption");
 
-// Crea el botón de cerrar
-const closeButton = document.createElement('button');
-closeButton.textContent = 'Cerrar';
-closeButton.classList.add('close-btn');
-modal.appendChild(closeButton);
+    modal.style.display = "block";
+    modalImage.src = image.src; // Establece la imagen seleccionada
+    captionText.innerHTML = image.alt; // Muestra el texto alternativo como descripción
+}
 
-// Imagen dentro del modal
-const modalImage = document.createElement('img');
-modal.appendChild(modalImage);
-
-// Mostrar imagen maximizada al hacer clic
-images.forEach((image) => {
-    image.addEventListener('click', () => {
-        modalImage.src = image.src;
-        modal.style.display = 'flex';
-    });
-});
-
-// Cerrar modal
-closeButton.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// Cerrar modal al hacer clic fuera de la imagen
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
-});
+// Cierra el modal
+function closeModal() {
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
