@@ -8,12 +8,12 @@
 
     /* Estilos generales */
 .header {
-    display: flex;
-    flex-direction: column; /* Organiza elementos verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Centra el texto */
-    padding: 20px;
+ 
+    padding: 10px; /* Reduce el espacio dentro del encabezado */
+    margin: 0; /* Elimina márgenes externos */
 }
+
+
 
 .header img {
     max-width: 100%; /* Ajusta el tamaño del logo a la pantalla */
@@ -284,10 +284,10 @@
 
 /* Estilo del carrusel */
 .carousel {
-    position: relative; /* Asegúrate de que el carrusel tenga su propio contexto de apilamiento */
-    z-index: 1; /* Valor más bajo que la barra de menú */
-    margin-top: 20px; /* Ajusta este margen según sea necesario para que no se superpongan */
+    margin-bottom: 0; /* Ajusta a 0 para eliminar el espacio inferior */
+    padding-bottom: 0; /* Elimina relleno inferior si existe */
 }
+
 
 
     /* Color de los íconos de navegación del carrusel */
@@ -308,9 +308,8 @@
 
     /* Contenedor principal para contenido */
     .main-content {
-        max-width: 80%;
-        margin: 0 auto;
-        padding: 20px;
+        margin-top: 0; /* Elimina el espacio superior */
+        padding-top: 0; /* Elimina cualquier relleno */
     }
 
     /* Estilo del footer */
@@ -397,9 +396,19 @@ footer p {
 /* Estilo para los títulos */
 .main-content h1,
 .main-content h2 {
-    color: #333;
-    font-family: Arial, sans-serif;
+   /* Reducir margen en encabezados */
+
+    margin-top: 0.5px; /* Ajusta a tu gusto */
+    margin-bottom: 0.5px;
 }
+
+/* Reducir margen de imágenes o secciones */
+.section {
+    padding: 0.5px 0; /* Reduce el espacio dentro de cada sección */
+    margin: 0.5px 0; /* Reduce el espacio entre las secciones */
+}
+
+
 
 /* Contenedor de la cuadrícula de imágenes */
 .ContenedorImagenes {
