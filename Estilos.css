@@ -286,6 +286,10 @@
 .carousel {
     margin-bottom: 0; /* Ajusta a 0 para eliminar el espacio inferior */
     padding-bottom: 0; /* Elimina relleno inferior si existe */
+    margin: 0; /* Elimina el margen superior e inferior */
+    padding: 0; /* Elimina el relleno dentro del carrusel */
+    max-width: 100%; /* Asegura que el carrusel no desborde la pantalla */
+    box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
 }
 
 
@@ -302,6 +306,7 @@
         width: auto;
         display: block;
         margin: 0 auto;
+        margin-bottom: 0; /* Elimina el espacio entre los items del carrusel */
     }
     
 
