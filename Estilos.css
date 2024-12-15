@@ -282,8 +282,18 @@
     position: relative; /* Asegúrate de que la barra de menú tenga un contexto de apilamiento */
     z-index: 1000; /* Valor alto para mantener la barra de menú en la parte superior */
 }
-
-
+/*agregado*/
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centra los botones verticalmente */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para los botones */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
 
     /* Color de los íconos de navegación del carrusel */
     .carousel-control-prev-icon,
@@ -294,20 +304,29 @@
         padding: 20px 0;
         margin-bottom: 200;
     }
-
-    .carousel-item img {
-        max-height: 100px;
-        width: auto;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 0; /* Elimina el espacio entre los items del carrusel */
+    /*agregado nuevo*/
+    .carousel-wrapper {
+        display: flex;
+        justify-content: center; /* Centra el contenido */
+        align-items: center;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
     }
     
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+    /*agregado nuevo*/
+    .carousel-item {
+        flex: 1 0 100%;
+        position: relative;
+    }
     .carousel-container {
         display: flex;
-        flex-direction: row; /* Si es horizontal */
-        overflow-x: auto;
-        gap: 10px; /* Ajusta el espacio entre las imágenes */
+        transition: transform 0.5s ease;
     }
     
     .carousel-item {
@@ -423,9 +442,10 @@ footer p {
 .main-content h1,
 .main-content h2 {
    /* Reducir margen en encabezados */
-
+    position:relative;
     margin-top: 0.5px; /* Ajusta a tu gusto */
     margin-bottom: 0.5px;
+    bottom: -37px;
 }
 
 /* Reducir margen de imágenes o secciones */
@@ -513,3 +533,4 @@ footer p {
         width: 250px; /* Ajusta el ancho para pantallas pequeñas */
     }
 }
+/*nota para mi si quiero volver a como estaba solo elimina lo nuevo agregado*/
