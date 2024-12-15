@@ -11,6 +11,7 @@
  
     padding: 10px; /* Reduce el espacio dentro del encabezado */
     margin: 0; /* Elimina márgenes externos */
+    margin-bottom: 5px;
 }
 
 
@@ -18,22 +19,22 @@
 .header img {
     max-width: 100%; /* Ajusta el tamaño del logo a la pantalla */
     height: auto; /* Mantiene la proporción del logo */
+    margin-bottom: 5px;
+    padding: 10px; 
 }
 
-/* Estilos para pantallas móviles */
 @media (max-width: 768px) {
     .header {
-        padding: 10px; /* Reduce el espacio alrededor en móviles */
+        margin-bottom: 5px; /* Menos espacio debajo del encabezado */
     }
-
-    .header h1 {
-        font-size: 20px; /* Ajusta el tamaño del texto principal */
+    .navbar-nav .nav-link {
+        margin: 5px auto; /* Reduce el espacio entre botones */
     }
-
-    .header p {
-        font-size: 14px; /* Ajusta el tamaño del subtítulo */
+    body {
+        padding: 2px; /* Reduce el espacio general en los bordes */
     }
 }
+
 .navbar-toggler {
     margin-top: 25px; /* Margen superior para mover hacia abajo */
 }
@@ -282,16 +283,6 @@
     z-index: 1000; /* Valor alto para mantener la barra de menú en la parte superior */
 }
 
-/* Estilo del carrusel */
-.carousel {
-    margin-bottom: 0; /* Ajusta a 0 para eliminar el espacio inferior */
-    padding-bottom: 0; /* Elimina relleno inferior si existe */
-    margin: 0; /* Elimina el margen superior e inferior */
-    padding: 0; /* Elimina el relleno dentro del carrusel */
-    max-width: 100%; /* Asegura que el carrusel no desborde la pantalla */
-    box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
-}
-
 
 
     /* Color de los íconos de navegación del carrusel */
@@ -299,23 +290,46 @@
     .carousel-control-next-icon {
         background-color: #317039; /* Cambia el color de la flecha a blanco */
         border-radius: 50%;
+        padding: 0%;
+        padding: 20px 0;
+        margin-bottom: 200;
     }
 
     .carousel-item img {
-        max-height: 400px;
+        max-height: 100px;
         width: auto;
         display: block;
         margin: 0 auto;
         margin-bottom: 0; /* Elimina el espacio entre los items del carrusel */
     }
     
-
-
-    /* Contenedor principal para contenido */
-    .main-content {
-        margin-top: 0; /* Elimina el espacio superior */
-        padding-top: 0; /* Elimina cualquier relleno */
+    #carouselExample{
+        padding: 0; 
+        margin: 0;
+        padding: 10px; 
     }
+    @media (max-width: 768px) {
+        #carousel-container {
+            margin-bottom: 1px; /* Espacio menor en móviles */
+            margin: 5% auto;
+        }
+    
+        .ContenedorImagenes {
+            padding: 10; 
+            margin: 0;
+            margin-bottom: 10px;
+        }
+    }
+    
+    
+    /* Estilos generales de los botones */
+button {
+    padding: 12px 24px; /* Tamaño general */
+    font-size: 16px;
+}
+
+
+
 
     /* Estilo del footer */
 footer {
