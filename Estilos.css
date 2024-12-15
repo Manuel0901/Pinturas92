@@ -303,11 +303,18 @@
         margin-bottom: 0; /* Elimina el espacio entre los items del carrusel */
     }
     
-    #carouselExample{
-        padding: 0; 
-        margin: 0;
-        padding: 10px; 
+    .carousel-container {
+        display: flex;
+        flex-direction: row; /* Si es horizontal */
+        overflow-x: auto;
+        gap: 10px; /* Ajusta el espacio entre las imágenes */
     }
+    
+    .carousel-item {
+        flex: 1 0 100%; /* Cada item ocupa todo el ancho del contenedor */
+    }
+    
+    
     @media (max-width: 768px) {
         #carousel-container {
             margin-bottom: 1px; /* Espacio menor en móviles */
