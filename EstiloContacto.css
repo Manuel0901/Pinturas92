@@ -6,7 +6,7 @@
     background-color: #f8edd9; /* Fondo blanco */
     border: 1px solid #ccc; /* Borde gris claro */
     border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 5px 30px 25px 10px gray; /* Sombra sutil */
 }
 
 /* Estilo para los elementos del formulario */
@@ -17,7 +17,7 @@
 .Formulario label {
     font-weight: bold; /* Hacemos que las etiquetas sean negritas */
     display: block; /* Aseguramos que la etiqueta ocupe toda la línea */
-    margin-bottom: 5px; /* Espaciado inferior */
+    margin-bottom: 25px; /* Espaciado inferior */
 }
 
 .Formulario input[type="text"],
