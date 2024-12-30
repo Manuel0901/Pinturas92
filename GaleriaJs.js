@@ -1,16 +1,27 @@
-// Abre el modal y muestra la imagen seleccionada
-function openModal(image) {
-    const modal = document.getElementById("modal");
-    const modalImage = document.getElementById("modal-image");
-    const captionText = document.getElementById("caption");
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item img');
 
-    modal.style.display = "block";
-    modalImage.src = image.src; // Establece la imagen seleccionada
-    captionText.innerHTML = image.alt; // Muestra el texto alternativo como descripción
-}
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const src = item.getAttribute('src');
+            const alt = item.getAttribute('alt');
+            openModal(src, alt);
+        });
+    });
 
-// Cierra el modal
-function closeModal() {
-    const modal = document.getElementById("modal");
-    modal.style.display = "none";
-}
+    function openModal(src, alt) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-image');
+        const caption = document.getElementById('caption');
+
+        modal.style.display = 'flex';
+        modalImg.src = src;
+        modalImg.alt = alt;
+        caption.innerText = alt;
+    }
+
+    window.closeModal = function() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    };
+});

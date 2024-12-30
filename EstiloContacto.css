@@ -49,3 +49,17 @@
 }
 
 
+/* Estilos para el mensaje de respuesta */
+#responseMessage {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#responseMessage.success {
+    color: green;
+}
+
+#responseMessage.error {
+    color: red;
+}
