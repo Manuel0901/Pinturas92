@@ -1,55 +1,69 @@
-document.getElementById('contactForm').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Evita recargar la página
+import express from 'express';
+import nodemailer from 'nodemailer';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
-    // Recoge los valores del formulario
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+dotenv.config();
 
-    // Inicializa el mensaje de respuesta y lo limpia
-    const responseMessageElement = document.getElementById('responseMessage');
-    responseMessageElement.textContent = '';  // Limpia cualquier mensaje previo
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-    // Validaciones simples
-    if (!name || !phone || !email || !message) {
-        responseMessageElement.textContent = 'Por favor, llena todos los campos.';
-        responseMessageElement.style.color = 'red';
-        return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        responseMessageElement.textContent = 'Por favor, ingresa un correo electrónico válido.';
-        responseMessageElement.style.color = 'red';
-        return;
-    }
-
-    // Muestra el indicador de carga
-    responseMessageElement.textContent = 'Enviando...';
-    responseMessageElement.style.color = 'blue';
-
-    const data = { name, phone, email, message };
-
-    // Llama a la API o backend para enviar el correo
-    try {
-        const response = await fetch('http://localhost:3000/send-email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-            responseMessageElement.textContent = 'Mensaje enviado con éxito. ¡Gracias por contactarnos!';
-            responseMessageElement.style.color = 'green';
-            document.getElementById('contactForm').reset(); // Limpia el formulario
-        } else {
-            responseMessageElement.textContent = 'Error al enviar el mensaje. Por favor, intenta más tarde.';
-            responseMessageElement.style.color = 'red';
-        }
-    } catch (error) {
-        responseMessageElement.textContent = 'Ocurrió un error. Verifica tu conexión e intenta nuevamente.';
-        responseMessageElement.style.color = 'red';
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
+
+app.get('/', (req, res) => {
+    res.send('Servidor funcionando correctamente');
+});
+
+app.post('/send-email', (req, res) => {
+    console.log('Datos recibidos:', req.body);
+
+    const { name, phone, email, message } = req.body;
+
+    if (!name || !phone || !email || !message) {
+        console.error('Faltan datos en el formulario.');
+        return res.status(400).send('Todos los campos son obligatorios.');
+    }
+
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: 'jose_manuelgarciarevalo@hotmail.com', // Cambia esto al correo de la empresa
+        subject: 'Nuevo mensaje de contacto',
+        text: `Nombre: ${name}\nTeléfono: ${phone}\nCorreo: ${email}\nMensaje: ${message}`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error al enviar el correo:', error);
+            res.status(500).send('Error al enviar el mensaje.');
+        } else {
+            console.log('Correo enviado: ' + info.response);
+            res.status(200).send('Correo enviado con éxito.');
+        }
+    });
+});
+
+// Ruta para probar el envío de correo
+app.get('/send-email', async (req, res) => {
+    try {
+        let info = await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: 'manuelgarcia85@gmail.com', // Correo de prueba
+            subject: 'Correo de prueba',
+            text: 'Este es un correo de prueba para verificar la configuración de Nodemailer.',
+        });
+        console.log('Correo de prueba enviado: ' + info.response);
+        res.status(200).send('Correo de prueba enviado con éxito.');
+    } catch (error) {
+        console.error('Error al enviar el correo de prueba:', error);
+        res.status(500).send('Error al enviar el correo de prueba.');
+    }
+});
+
+app.listen
