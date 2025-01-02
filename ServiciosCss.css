@@ -1,17 +1,101 @@
-.contenedor-imagenes {
-    display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 10px;
-     transition: transform 0.3s ease; /* Efecto de zoom */
- }
- 
- .item {
-     text-align: center;
- }
- 
- .item img {
-     width: 150px;  
-     height: 150px; 
-     object-fit: cover; /* Ajusta la imagen al tamaño del tamaño del contenedor */
- }
- 
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de menú */
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff;
+}
+
+/* Estilos para la sección de servicios */
+#servicios {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#servicios h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.servicio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.servicio img.img-servicio {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.servicio h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.servicio p {
+    margin: 0;
+    color: #555;
+}
+
+/* Estilos para otras secciones */
+section {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #f8edd9;
+    padding: 20px 0;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 600px) {
+    .servicio {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .servicio img.img-servicio {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}

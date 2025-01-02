@@ -1,106 +1,115 @@
-    <!--
-    Autor: Jose Manuel Garcia Arevalo.
-    Estatus: Egresado de ingeniería en sistemas.
-    Fecha: **/10/2024
-    Diseños Gráficos: Raul Alberto Zanco
-    -->
-
-    <!DOCTYPE html>
-    <html lang="es">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Negocio de pinturas</title>
-        <!-- Estilo CSS -->
-        <link rel="stylesheet" href="Estilos.css">
-        <link rel="stylesheet" href="HeaderCss.css">
-        <link rel="stylesheet" href="ServiciosCss.css">
-        <!-- Agrega Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!--icono-->
-        <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
-
-    </head>
-
-    <body>
-
-        <header>
-            <!-- Menú de navegación -->
-            <!-- Barra de navegación -->
-            <nav class="navbar navbar-expand-lg" style="background-color: #f8edd9;">
-                <div class="container-fluid">
-                    <div id="nombreEmpresa">
-                        <a href="Index.html">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negocio de pinturas</title>
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="HeaderCss.css">
+    <link rel="stylesheet" href="GaleriaCss.css">
+    <link rel="stylesheet" href="ServiciosCss.css">
+    <!-- Agrega Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- icono -->
+    <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- Menú de navegación -->
+        <nav class="navbar navbar-expand-lg" style="background-color: #f8edd9;">
+            <div class="container-fluid">
+                <div id="nombreEmpresa">
+                    <a href="Index.html">
                         <img src="RecursosVisuales/logo1.png" alt="Logo de L & Z Painting" />
                     </a>
-
-                    </div>
-            
-                    <!-- Botón para desplegar el menú, con clase ms-auto para moverlo a la derecha -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto;">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-            
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <div id="BotonInicio">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: auto;">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <div id="BotonInicio">
                                 <a class="nav-link btn-inicio" href="Index.html">Home</a>
                             </div>
-                            </li>
-                            <li class="nav-item">
-                                <div id="BotonServicios">
+                        </li>
+                        <li class="nav-item">
+                            <div id="BotonServicios">
                                 <a class="nav-link btn-servicios" href="Servicios.html">Servicios</a>
                             </div>
-                            </li>
-                            <div id="BotonGaleria">
+                        </li>
+                        <div id="BotonGaleria">
                             <li class="nav-item">
                                 <a class="nav-link btn-galeria" href="Galeria.html">Galería</a>
                             </div>
-                            </li>
-                            <li class="nav-item">
-                                <div id="BotonContacto">
+                        </li>
+                        <li class="nav-item">
+                            <div id="BotonContacto">
                                 <a class="nav-link btn-contacto" href="Contacto.html">Contacto</a>
                             </div>
-                            </li>
-                        </ul>
-                        <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
-                    </div>
-                </div>
-            </nav>
-            
-            
-
-           <!-- Separador con sombra -->
-     <div class="separador"></div>
-        </header>
-        <!--aqui va el cuerpo de los servicios que se ofrecen-->
-        <div class="contenedor-imagenes">
-            <div class="item">
-                <img src="RecursosVisuales/casa3.jpg" alt="">
-            </div>
-            <div class="item">
-                <img src="RecursosVisuales/casa2.jpg" alt="">
-
-            </div>
-        </div>
-
-        <!-- Pie de página -->
-        <footer>
-            <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
-            <div id="Contactos">
-                <div class="iconoRedSocial">
-                    <img src="RecursosVisuales/whatsap.png" alt="WhatsApp">
-                </div>
-                <div class="iconoRedSocial">
-                    <img src="RecursosVisuales/facebook.png" alt="Facebook">
-                </div>
-                <div class="iconoRedSocial">
-                    <img src="RecursosVisuales/tiktok.png" alt="TikTok">
+                        </li>
+                    </ul>
+                    <img class="icon-lupa" src="RecursosVisuales/lupa.png" alt="Lupa">
                 </div>
             </div>
-        </footer>
-             <!-- animacioon del menu amburgesa con JS -->
-             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        </body>
+        </nav>
+    </header>
+
+    <main>
+        <section id="servicios">
+            <h2>Servicios Ofrecidos</h2>
+            <div class="servicio">
+                <img src="RecursosVisuales/casa6.jpg" alt="Pintura Interior" class="img-servicio">
+                <h3>Pintura Interior</h3>
+                <p>Descripción detallada de los servicios de pintura interior...</p>
+            </div>
+            <div class="servicio">
+                <img src="RecursosVisuales/image00011.jpeg" alt="Pintura Exterior" class="img-servicio">
+                <h3>Pintura Exterior</h3>
+                <p>Información sobre la durabilidad y resistencia de los materiales...</p>
+            </div>
+            <div class="servicio">
+                <img src="RecursosVisuales/casa6.jpg" alt="Decoración y Murales" class="img-servicio">
+                <h3>Decoración y Murales</h3>
+                <p>Servicios de diseño artístico y murales personalizados...</p>
+            </div>
+            <div class="servicio">
+                <img src="RecursosVisuales/image00007.webp" alt="Reparación y Mantenimiento" class="img-servicio">
+                <h3>Reparación y Mantenimiento</h3>
+                <p>Servicios de reparación de superficies dañadas y mantenimiento regular...</p>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería de Proyectos</h2>
+            <!-- Imágenes y testimonios -->
+        </section>
+
+        <section id="proceso">
+            <h2>Proceso de Trabajo</h2>
+            <!-- Descripción del proceso -->
+        </section>
+
+        <section id="precios">
+            <h2>Paquetes y Precios</h2>
+            <!-- Información de precios y paquetes -->
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto y Cotización</h2>
+            <!-- Formulario de contacto -->
+        </section>
+
+        <section id="certificaciones">
+            <h2>Certificaciones y Garantías</h2>
+            <!-- Información sobre certificaciones y garantías -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
+        <!-- Información de contacto y redes sociales -->
+    </footer>
+</body>
+</html>

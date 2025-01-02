@@ -101,3 +101,29 @@ p:hover {
         font-size: 14px; /* Reduce el tamaño de la fuente si es necesario */
     }
 }
+
+/* Estilos para el footer fijo solo en móvil */
+@media only screen and (max-width: 600px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8edd9; /* Asegúrate de que el color de fondo sea consistente */
+        padding: 10px 0;
+        text-align: center;
+        z-index: 1000; /* Asegúrate de que el footer esté por encima de otros elementos */
+    }
+
+    .carousel-caption {
+        position: static;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .carousel-item img {
+        border-radius: 0; /* Elimina el borde redondeado en móviles si es necesario */
+    }
+}

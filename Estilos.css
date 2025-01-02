@@ -364,6 +364,7 @@ footer {
     text-align: center; /* Centra el texto en el footer */
 }
 
+
 /* Estilo para el contenedor de contactos */
 #Contactos {
     display: flex;
@@ -494,6 +495,8 @@ footer p {
 @media (max-width: 768px) {
     .ContenedorImagenes {
         grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+
+      
     }
 
     #Contenedor1,
