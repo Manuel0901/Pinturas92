@@ -12,6 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- icono -->
     <link rel="icon" href="RecursosVisuales/icono.ico" type="image/x-icon">
+    <!-- Agrega Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -55,89 +57,48 @@
         </nav>
         <!-- Separador con sombra -->
         <div class="separador"></div>
-    
+    </header>
 
     <div class="container mt-5">
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 1.jpg" data-lightbox="galeria" data-title="BLANCO BRILLANTE: Como puede observar, este proyecto refleja la calidad y precisión de nuestro trabajo. Nos enfocamos en acabados impecables que resaltan el color y la textura, ya sea en interiores o exteriores. Aquí hemos trabajado con tonos vibrantes para dar vida al espacio, asegurándonos de mantener una aplicación uniforme y duradera.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 1.jpg" class="img-fluid img-thumbnail" alt="Imagen 1">
+                </a>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 1.jpg" class="d-block w-100" alt="Imagen 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>BLANCO BRILLANTE</h5>
-                        <p>Como puede observar, este proyecto refleja la calidad y precisión de nuestro trabajo. 
-                            Nos enfocamos en acabados impecables que resaltan el color y la textura, ya sea en interiores o exteriores. 
-                            Aquí hemos trabajado con tonos vibrantes para dar vida al espacio, asegurándonos de mantener una aplicación uniforme y duradera</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 2.jpg" class="d-block w-100" alt="Imagen 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Título de Imagen 2</h5>
-                        <p>Descripción breve de la imagen 2.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 3.jpg" class="d-block w-100" alt="Imagen 3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>FACHADA DE COLOR AZUL</h5>
-                        <p>En este ejemplo, puede notar cómo logramos transformar superficies con retoques detallados.
-                             Nuestro objetivo siempre es preservar la calidad y garantizar que cada proyecto luzca como nuevo.
-                              Este trabajo resalta nuestra dedicación al detalle y al mantenimiento de los acabados originales.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 4.jpg" class="d-block w-100" alt="Imagen 4">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Título de Imagen 4</h5>
-                        <p>Descripción breve de la imagen 4.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 5.jpg" class="d-block w-100" alt="Imagen 5">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Título de Imagen 5</h5>
-                        <p>Descripción breve de la imagen 5.</p>
-                    </div>
-                </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 7.jpg" class="d-block w-100" alt="Imagen 7">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Título de Imagen 7</h5>
-                        <p>Descripción breve de la imagen 7.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 8.jpg" class="d-block w-100" alt="Imagen 8">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>ACABADO LLAMATIVO</h5>
-                        <p>En este proyecto, verá cómo combinamos creatividad y diseño para crear un espacio visualmente atractivo.
-                             Trabajamos con paletas de colores que armonizan perfectamente y destacamos áreas clave para captar la atención.
-                             Es un claro ejemplo de cómo nuestros servicios pueden realzar cualquier espacio.</p>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 2.jpg" data-lightbox="galeria" data-title="Título de Imagen 2: Descripción breve de la imagen 2.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 2.jpg" class="img-fluid img-thumbnail" alt="Imagen 2">
+                </a>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 3.jpg" data-lightbox="galeria" data-title="FACHADA DE COLOR AZUL: En este ejemplo, puede notar cómo logramos transformar superficies con retoques detallados. Nuestro objetivo siempre es preservar la calidad y garantizar que cada proyecto luzca como nuevo. Este trabajo resalta nuestra dedicación al detalle y al mantenimiento de los acabados originales.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 3.jpg" class="img-fluid img-thumbnail" alt="Imagen 3">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 4.jpg" data-lightbox="galeria" data-title="Título de Imagen 4: Descripción breve de la imagen 4.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 4.jpg" class="img-fluid img-thumbnail" alt="Imagen 4">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 5.jpg" data-lightbox="galeria" data-title="Título de Imagen 5: Descripción breve de la imagen 5.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 5.jpg" class="img-fluid img-thumbnail" alt="Imagen 5">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 7.jpg" data-lightbox="galeria" data-title="Título de Imagen 7: Descripción breve de la imagen 7.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 7.jpg" class="img-fluid img-thumbnail" alt="Imagen 7">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="RecursosVisuales/RecursoGaleria/Galeria 8.jpg" data-lightbox="galeria" data-title="ACABADO LLAMATIVO: En este proyecto, verá cómo combinamos creatividad y diseño para crear un espacio visualmente atractivo. Trabajamos con paletas de colores que armonizan perfectamente y destacamos áreas clave para captar la atención. Es un claro ejemplo de cómo nuestros servicios pueden realzar cualquier espacio.">
+                    <img src="RecursosVisuales/RecursoGaleria/Galeria 8.jpg" class="img-fluid img-thumbnail" alt="Imagen 8">
+                </a>
+            </div>
         </div>
     </div>
-</header>
+
     <footer>
         <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
         <div id="Contactos">
@@ -152,5 +113,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
