@@ -59,46 +59,73 @@
         <div class="separador"></div>
     </header>
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 1.jpg" data-lightbox="galeria" data-title="BLANCO BRILLANTE: Como puede observar, este proyecto refleja la calidad y precisión de nuestro trabajo. Nos enfocamos en acabados impecables que resaltan el color y la textura, ya sea en interiores o exteriores. Aquí hemos trabajado con tonos vibrantes para dar vida al espacio, asegurándonos de mantener una aplicación uniforme y duradera.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 1.jpg" class="img-fluid img-thumbnail" alt="Imagen 1">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 2.jpg" data-lightbox="galeria" data-title="Título de Imagen 2: Descripción breve de la imagen 2.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 2.jpg" class="img-fluid img-thumbnail" alt="Imagen 2">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 3.jpg" data-lightbox="galeria" data-title="FACHADA DE COLOR AZUL: En este ejemplo, puede notar cómo logramos transformar superficies con retoques detallados. Nuestro objetivo siempre es preservar la calidad y garantizar que cada proyecto luzca como nuevo. Este trabajo resalta nuestra dedicación al detalle y al mantenimiento de los acabados originales.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 3.jpg" class="img-fluid img-thumbnail" alt="Imagen 3">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 4.jpg" data-lightbox="galeria" data-title="Título de Imagen 4: Descripción breve de la imagen 4.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 4.jpg" class="img-fluid img-thumbnail" alt="Imagen 4">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 5.jpg" data-lightbox="galeria" data-title="Título de Imagen 5: Descripción breve de la imagen 5.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 5.jpg" class="img-fluid img-thumbnail" alt="Imagen 5">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 7.jpg" data-lightbox="galeria" data-title="Título de Imagen 7: Descripción breve de la imagen 7.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 7.jpg" class="img-fluid img-thumbnail" alt="Imagen 7">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="RecursosVisuales/RecursoGaleria/Galeria 8.jpg" data-lightbox="galeria" data-title="ACABADO LLAMATIVO: En este proyecto, verá cómo combinamos creatividad y diseño para crear un espacio visualmente atractivo. Trabajamos con paletas de colores que armonizan perfectamente y destacamos áreas clave para captar la atención. Es un claro ejemplo de cómo nuestros servicios pueden realzar cualquier espacio.">
-                    <img src="RecursosVisuales/RecursoGaleria/Galeria 8.jpg" class="img-fluid img-thumbnail" alt="Imagen 8">
-                </a>
-            </div>
+    <!--GALERIA DE IMAGENES-->
+    <div class="overlay">
+        <div class="slideshow">
+            <!-- Botón de cerrar -->
+            <button class="btn_cerrar" aria-label="Cerrar slideshow">&times;</button>
+            
+            <!-- Botón de ir atrás -->
+            <button class="botones_atras" aria-label="Imagen anterior">
+                <i class="mdi mdi-arrow-left-circle-outline"></i>
+            </button>
+            
+            <!-- Imagen del slideshow -->
+            <img src="" alt="Descripción de la imagen" id="imag_slideshow">
+            
+            <!-- Botón de ir adelante -->
+            <button class="botones_adelante" aria-label="Imagen siguiente">
+                <i class="mdi mdi-arrow-right-circle-outline"></i>
+            </button>
         </div>
     </div>
+    
 
+    <section class="Galeria">
+        <div class="columna">
+            <img src="RecursosVisuales/RecursoGaleria/Galeria 1.jpg" alt="" data-img-mostrar="1">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/RecursoGaleria/Galeria 2.jpg" alt="" data-img-mostrar="2">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/RecursoGaleria/Galeria 3.jpg" alt="" data-img-mostrar="3">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/RecursoGaleria/Galeria 4.jpg" alt="" data-img-mostrar="4">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/RecursoGaleria/Galeria 5.jpg" alt="" data-img-mostrar="5">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/RecursoGaleria/Galeria 7.jpg" alt="" data-img-mostrar="7">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/image00009.webp" alt="" data-img-mostrar="8">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/carruse10.jpg" alt="" data-img-mostrar="9">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/carrusel2.jpg" alt="" data-img-mostrar="10
+            ">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/carrusel3.jpg" alt="" data-img-mostrar="10
+            ">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/image00006.webp" alt="" data-img-mostrar="10
+            ">
+        </div>
+        <div class="columna">
+            <img src="RecursosVisuales/image00005.webp" alt="" data-img-mostrar="10
+            ">
+        </div>
+    
+    
+    </section>
+    
     <footer>
         <p>&copy; R.M(diseños) 2024. Todos los derechos reservados.</p>
         <div id="Contactos">
@@ -110,9 +137,13 @@
             </div>
         </div>
     </footer>
+    
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
 </body>
 </html>
