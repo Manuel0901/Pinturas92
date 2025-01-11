@@ -63,3 +63,7 @@
 #responseMessage.error {
     color: red;
 }
+/*hover de color blanco para los botones*/
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}

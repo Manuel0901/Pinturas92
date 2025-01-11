@@ -537,3 +537,39 @@ footer p {
     }
 }
 /*nota para mi si quiero volver a como estaba solo elimina lo nuevo agregado*/
+
+/*hover de color blanco*/
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}
+
+/*estilos preferentes para el footer*/
+/* Estilos CSS */
+.iconoRedSocial {
+    position: relative;
+}
+
+.whatsapp-container {
+    position: relative;
+    display: inline-block;
+}
+
+.whatsapp-number {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    color: white; /* Color del texto */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-container:hover .whatsapp-number {
+    display: block;
+}
+    

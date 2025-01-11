@@ -130,3 +130,7 @@ footer p {
         max-width: 100%;
     }
 }
+/*hover de color blanco*/
+.navbar-nav .nav-item .nav-link:hover {
+    color: white;
+}
