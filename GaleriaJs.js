@@ -38,3 +38,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+/*mini navegacion*/
+let currentImageIndex = 0;
+const images = [
+    'RecursosVisuales/CamisaBrochas.png',
+    'RecursosVisuales/casa1.jpg',
+    'RecursosVisuales/casa2.jpg',
+    // Agrega más rutas de imágenes aquí
+];
+
+const imag_slideshow = document.getElementById('imag_slideshow');
+const btn_atras = document.querySelector('.botones_atras');
+const btn_adelante = document.querySelector('.botones_adelante');
+
+btn_atras.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+    imag_slideshow.src = images[currentImageIndex];
+});
+
+btn_adelante.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+    imag_slideshow.src = images[currentImageIndex];
+});

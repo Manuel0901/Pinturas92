@@ -26,6 +26,7 @@ body {
 #servicios {
     padding: 40px 20px;
     background-color: #fff;
+   
 }
 
 #servicios h2 {
@@ -41,7 +42,7 @@ body {
     padding: 20px;
     background-color: #f8f8f8;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 10px 10px 10px gray;
 }
 
 .servicio img.img-servicio {
@@ -98,4 +99,8 @@ footer {
         margin-bottom: 10px;
         margin-right: 0;
     }
+}
+
+#cer{
+    box-shadow: 5px 10px 10px 10px gray;
 }

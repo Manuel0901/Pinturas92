@@ -4,24 +4,22 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
-console.log('EMAIL_USER:', process.env.EMAIL_USER); // Debería imprimir tu_correo@gmail.com
-console.log('EMAIL_PASS:', process.env.EMAIL_PASS); // Debería imprimir tu_contraseña_de_aplicación
+console.log('EMAIL_USER:', process.env.EMAIL_USER);
+console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
 
 const app = express();
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, // true para puerto 465, false para puerto 587
     auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-});
-
-app.get('/', (req, res) => {
-    res.send('Servidor funcionando correctamente');
+        pass: process.env.EMAIL_PASS,
+    },
 });
 
 app.post('/send-email', (req, res) => {

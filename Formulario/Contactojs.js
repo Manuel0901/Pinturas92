@@ -54,7 +54,7 @@ app.get('/send-email', async (req, res) => {
     try {
         let info = await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: 'manuelgarcia85@gmail.com', // Correo de prueba
+            to: 'jose_manuelgarciarevalo@htomailcom.com', // Correo de prueba
             subject: 'Correo de prueba',
             text: 'Este es un correo de prueba para verificar la configuración de Nodemailer.',
         });
