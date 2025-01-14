@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Ruta base
-app.get('Index.html', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Bienvenido al servidor de Pinturas92.');
 });
 
