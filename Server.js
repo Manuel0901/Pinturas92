@@ -2,7 +2,6 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import path from 'path';
 
 dotenv.config();
 
@@ -24,9 +23,9 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Ruta para servir el archivo index.html
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'Index.html'));
+// Ruta base
+app.get('Index.html', (req, res) => {
+    res.send('Bienvenido al servidor de Pinturas92.');
 });
 
 // Ruta para enviar correos
