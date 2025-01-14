@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 dotenv.config();
+
 console.log('EMAIL_USER:', process.env.EMAIL_USER);
 console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
 
@@ -15,20 +16,23 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
-    secure: true, // true para puerto 465, false para puerto 587
+    secure: true, // true para puerto 465
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
     },
 });
 
-app.post('/send-email', (req, res) => {
-    console.log('Datos recibidos:', req.body);
+// Ruta base
+app.get('/', (req, res) => {
+    res.send('Bienvenido al servidor de Pinturas92.');
+});
 
+// Ruta para enviar correos
+app.post('/send-email', (req, res) => {
     const { name, phone, email, message } = req.body;
 
     if (!name || !phone || !email || !message) {
-        console.error('Faltan datos en el formulario.');
         return res.status(400).send('Todos los campos son obligatorios.');
     }
 
@@ -42,14 +46,20 @@ app.post('/send-email', (req, res) => {
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error al enviar el correo:', error);
-            res.status(500).send('Error al enviar el mensaje.');
-        } else {
-            console.log('Correo enviado: ' + info.response);
-            res.status(200).send('Correo enviado con éxito.');
+            return res.status(500).send('Error al enviar el mensaje.');
         }
+        res.status(200).send('Correo enviado con éxito.');
     });
 });
 
-app.listen(3000, () => {
-    console.log('Servidor corriendo en http://localhost:3000');
+// Puerto dinámico
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+
+// Manejador global de errores
+app.use((err, req, res, next) => {
+    console.error('Error no manejado:', err);
+    res.status(500).send('Ha ocurrido un error en el servidor.');
 });
