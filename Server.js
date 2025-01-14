@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport({
 
 // Ruta para servir el archivo index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'Index.html'));
 });
 
 // Ruta para enviar correos
