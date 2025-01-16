@@ -572,4 +572,23 @@ footer p {
 .whatsapp-container:hover .whatsapp-number {
     display: block;
 }
-    
+   /*css para boton flotante de whatsap*/
+   
+   .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-float a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float a img:hover {
+    transform: scale(1.1);
+}
