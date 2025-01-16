@@ -574,21 +574,32 @@ footer p {
 }
    /*css para boton flotante de whatsap*/
    
-   .whatsapp-float {
+/* Estilos generales para el ícono de WhatsApp */
+.whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
+    bottom: 20px; /* Espacio desde abajo */
+    right: 20px; /* Espacio desde la derecha */
+    z-index: 1000; /* Para asegurarse de que esté visible */
 }
 
 .whatsapp-float a img {
-    width: 60px;
+    width: 60px; /* Tamaño estándar en pantallas grandes */
     height: 60px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    border-radius: 50%; /* Ícono circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease; /* Efecto de zoom al pasar el cursor */
 }
 
 .whatsapp-float a img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Agrandar ligeramente al pasar el cursor */
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-float a img {
+        width: 40px; /* Tamaño reducido para móviles */
+        height: 40px;
+        bottom: 15px; /* Ajuste*/
+
+    }
 }
