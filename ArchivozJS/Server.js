@@ -19,9 +19,10 @@ app.use(express.json()); // Parsear JSON en el cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true })); // Parsear datos codificados como formulario
 app.use(cors()); // Permitir solicitudes de otros orígenes
 
-// Configuración para servir archivos estáticos
-const publicPath = path.resolve('html'); // Carpeta donde están tus archivos HTML
+// Configuración para servir archivos estáticos desde la raíz del proyecto
+const publicPath = __dirname; // Ahora apunta a la raíz del proyecto
 app.use(express.static(publicPath));
+
 
 // Configuración de transporte para nodemailer
 const transporter = nodemailer.createTransport({
