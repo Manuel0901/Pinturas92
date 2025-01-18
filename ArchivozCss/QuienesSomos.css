@@ -63,3 +63,30 @@ header {
         height: auto;
     }
 }
+/* Estilo general para la sección de "Quiénes somos" */
+.quienes-somos {
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Espaciado externo */
+    background-color: #ffffff; /* Color de fondo (ajústalo a tus colores) */
+    color: rgb(14, 13, 13); /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el efecto de profundidad */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    max-width: 600px; /* Ancho máximo para que no se estire demasiado */
+    margin-left: auto;
+    margin-right: auto; /* Centra el cuadro */
+}
+
+/* Estilo para los párrafos dentro de la sección */
+.quienes-somos p {
+    font-size: 18px; /* Tamaño de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Asegura que sea responsive */
+@media (max-width: 768px) {
+    .quienes-somos {
+        width: 90%; /* Ajusta el ancho para pantallas móviles */
+    }
+}
