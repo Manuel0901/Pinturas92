@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true })); // Parsear datos codificados co
 app.use(cors()); // Permitir solicitudes de otros orígenes
 
 // Configuración para servir archivos estáticos
-const publicPath = path.resolve('Index.html'); // Carpeta donde están tus archivos HTML
+const publicPath = path.resolve('html'); // Carpeta donde están tus archivos HTML
 app.use(express.static(publicPath));
 
 // Configuración de transporte para nodemailer
