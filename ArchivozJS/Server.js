@@ -19,9 +19,10 @@ app.use(express.json()); // Parsear JSON en el cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true })); // Parsear datos codificados como formulario
 app.use(cors()); // Permitir solicitudes de otros orígenes
 
-// Configuración para servir archivos estáticos
-const publicPath = path.resolve('html'); // Carpeta donde están tus archivos HTML
-app.use(express.static(publicPath));
+// Configuración para servir archivos estáticos desde la raíz de Pintiuras
+const publicPath = path.resolve(__dirname); // Apunta a la raíz de la carpeta Pintiuras
+app.use(express.static(publicPath)); // Servir archivos estáticos desde la raíz
+
 
 // Configuración de transporte para nodemailer
 const transporter = nodemailer.createTransport({
@@ -34,9 +35,8 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-// Ruta principal para servir el archivo HTML
 app.get('/', (req, res) => {
-    res.sendFile(path.join(publicPath, 'Index.html')); // Carga el archivo `Index.html` como página principal
+    res.sendFile(path.join(publicPath, 'Index.html')); // Carga el archivo `Index.html` desde la raíz
 });
 
 // Ruta para manejar el envío de correos
