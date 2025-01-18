@@ -22,6 +22,9 @@ app.use(cors()); // Permitir solicitudes de otros orígenes
 // Configuración para servir archivos estáticos desde la raíz de Pintiuras
 const publicPath = path.resolve(__dirname); // Apunta a la raíz de la carpeta Pintiuras
 app.use(express.static(publicPath)); // Servir archivos estáticos desde la raíz
+// Configuración para servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'css'))); // Para la carpeta de CSS
+app.use(express.static(path.join(__dirname, 'js')));  // Para la carpeta de JS
 
 
 // Configuración de transporte para nodemailer
