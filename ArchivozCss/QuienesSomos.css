@@ -67,10 +67,10 @@ header {
 .quienes-somos {
     padding: 20px; /* Espaciado interno */
     margin: 20px; /* Espaciado externo */
-    background-color: #ffffff; /* Color de fondo (ajústalo a tus colores) */
+    border-style: hidden;
     color: rgb(14, 13, 13); /* Color del texto */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para el efecto de profundidad */
+    box-shadow: 0px 12px 30px rgba(0.6, 219, 9,198); /* Sombra sutil para el efecto de profundidad */
     width: 80%; /* Ajusta el ancho según sea necesario */
     max-width: 600px; /* Ancho máximo para que no se estire demasiado */
     margin-left: auto;

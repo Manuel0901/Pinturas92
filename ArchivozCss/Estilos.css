@@ -586,9 +586,10 @@ footer p {
     width: 60px; /* Tamaño estándar en pantallas grandes */
     height: 60px;
     border-radius: 50%; /* Ícono circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    box-shadow: 0 12px 24px rgba(0, 0, 8, 0.9); /* Sombra más notable */
     transition: transform 0.3s ease; /* Efecto de zoom al pasar el cursor */
 }
+
 
 .whatsapp-float a img:hover {
     transform: scale(1.1); /* Agrandar ligeramente al pasar el cursor */
